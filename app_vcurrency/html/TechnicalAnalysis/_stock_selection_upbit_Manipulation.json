@@ -1,0 +1,18 @@
+[
+  {
+    "name": "KRW-ANKR",
+    "date": "2026-03-21",
+    "closePrice": 8.97,
+    "buyTargetPrice": 7.062329999999999,
+    "sellTargetPrice": 8.15511103642131,
+    "targetPrices": {
+      "buyTargetPrice": 7.062329999999999,
+      "sellTargetPrice": 8.15511103642131,
+      "atrStopLossPrice": 7.614285714285716,
+      "rsi50Price": 6.773480215072634
+    },
+    "totalScore": 6,
+    "summary": "강력한 매수 우위 포착: 다수의 지표가 강한 상승 모멘텀과 수급을 지지하고 있습니다.",
+    "scoreComment": "MA 20 (단기 추세) 상회, MA 60 (수급선) 상회, MA 120 (경기선) 상회, RSI 55 이상 (매수세 강함), MACD Histo 양수 (상승 모멘텀), Stoch %K > %D (상승 모멘텀), CMF -0.05 이하 (순 매도 압력 강함), BBand %B 0.5 이상 (중심선 상회)"
+  }
+]

@@ -1,0 +1,146 @@
+[
+    {
+        "name": "BTC_KRW",
+        "date": "2026-03-21",
+        "closePrice": 105719000,
+        "buyTargetPrice": 106098564,
+        "sellTargetPrice": 107159653.33333333,
+        "targetPrices": {
+            "buyTargetPrice": 106098564,
+            "sellTargetPrice": 107159653.33333333,
+            "atrStopLossPrice": 98514285.71428572,
+            "rsi50Price": 103841199.65457916
+        },
+        "totalScore": 1,
+        "summary": "매수 우위 포착: 긍정적인 지표가 부정적인 지표보다 많습니다. 단기 조정 시 매수 기회입니다.",
+        "scoreComment": "MA 20 (단기 추세) 상회, MA 60 (수급선) 하회, MA 120 (경기선) 하회, RSI 45-55 (중립), MACD Histo 양수 (상승 모멘텀), Stoch %K < %D (하락 모멘텀), CMF 0.05 이상 (순 매수 압력 강함), BBand %B 0.5 이상 (중심선 상회)"
+    },
+    {
+        "name": "F_KRW",
+        "date": "2026-03-21",
+        "closePrice": 8.478,
+        "buyTargetPrice": 8.5601175,
+        "sellTargetPrice": 8.722360000000002,
+        "targetPrices": {
+            "buyTargetPrice": 8.5601175,
+            "sellTargetPrice": 8.722360000000002,
+            "atrStopLossPrice": 7.260285714285715,
+            "rsi50Price": 8.29034941291809
+        },
+        "totalScore": 1,
+        "summary": "매수 우위 포착: 긍정적인 지표가 부정적인 지표보다 많습니다. 단기 조정 시 매수 기회입니다.",
+        "scoreComment": "MA 20 (단기 추세) 상회, MA 60 (수급선) 하회, MA 120 (경기선) 하회, RSI 45-55 (중립), MACD Histo 양수 (상승 모멘텀), Stoch %K > %D (상승 모멘텀), CMF -0.05 이하 (순 매도 압력 강함), BBand %B 0.5 이상 (중심선 상회)"
+    },
+    {
+        "name": "NFT_KRW",
+        "date": "2026-03-21",
+        "closePrice": 0.0004,
+        "buyTargetPrice": 0.000404,
+        "sellTargetPrice": 0.00046035000000000005,
+        "targetPrices": {
+            "buyTargetPrice": 0.000404,
+            "sellTargetPrice": 0.00046035000000000005,
+            "atrStopLossPrice": 0.0001714285714285714,
+            "rsi50Price": 0.0004785083770751953
+        },
+        "totalScore": -8,
+        "summary": "강력한 매도 우위 포착: 추세가 붕괴되었으며, 하락 모멘텀이 강합니다. 관망 또는 손절이 필요한 시점입니다.",
+        "scoreComment": "MA 20 (단기 추세) 하회, MA 60 (수급선) 하회, MA 120 (경기선) 하회, RSI 45 이하 (매도세 강함), MACD Histo 음수 (하락 모멘텀), Stoch %K < %D (하락 모멘텀), CMF -0.05 이하 (순 매도 압력 강함), BBand %B 0.5 이하 (중심선 하회)"
+    },
+    {
+        "name": "REI_KRW",
+        "date": "2026-03-21",
+        "closePrice": 4.043,
+        "buyTargetPrice": 4.075235999999999,
+        "sellTargetPrice": 4.227523333333334,
+        "targetPrices": {
+            "buyTargetPrice": 4.075235999999999,
+            "sellTargetPrice": 4.227523333333334,
+            "atrStopLossPrice": 3.579571428571429,
+            "rsi50Price": 3.8567116003036497
+        },
+        "totalScore": 2,
+        "summary": "매수 우위 포착: 긍정적인 지표가 부정적인 지표보다 많습니다. 단기 조정 시 매수 기회입니다.",
+        "scoreComment": "MA 20 (단기 추세) 상회, MA 60 (수급선) 하회, MA 120 (경기선) 하회, RSI 55 이상 (매수세 강함), MACD Histo 양수 (상승 모멘텀), Stoch %K > %D (상승 모멘텀), CMF -0.05 이하 (순 매도 압력 강함), BBand %B 0.5 이상 (중심선 상회)"
+    },
+    {
+        "name": "SOL_KRW",
+        "date": "2026-03-21",
+        "closePrice": 135100,
+        "buyTargetPrice": 136293.3,
+        "sellTargetPrice": 136417.33333333334,
+        "targetPrices": {
+            "buyTargetPrice": 136293.3,
+            "sellTargetPrice": 136417.33333333334,
+            "atrStopLossPrice": 122757.14285714286,
+            "rsi50Price": 130463.38453292847
+        },
+        "totalScore": 2,
+        "summary": "매수 우위 포착: 긍정적인 지표가 부정적인 지표보다 많습니다. 단기 조정 시 매수 기회입니다.",
+        "scoreComment": "MA 20 (단기 추세) 상회, MA 60 (수급선) 하회, MA 120 (경기선) 하회, RSI 45-55 (중립), MACD Histo 양수 (상승 모멘텀), Stoch %K > %D (상승 모멘텀), CMF (-0.05 ~ 0.05) 중립, BBand %B 0.5 이상 (중심선 상회)"
+    },
+    {
+        "name": "STORJ_KRW",
+        "date": "2026-03-21",
+        "closePrice": 150,
+        "buyTargetPrice": 150.3315,
+        "sellTargetPrice": 159.58,
+        "targetPrices": {
+            "buyTargetPrice": 150.3315,
+            "sellTargetPrice": 159.58,
+            "atrStopLossPrice": 137,
+            "rsi50Price": 143.88470649719238
+        },
+        "totalScore": 2,
+        "summary": "매수 우위 포착: 긍정적인 지표가 부정적인 지표보다 많습니다. 단기 조정 시 매수 기회입니다.",
+        "scoreComment": "MA 20 (단기 추세) 상회, MA 60 (수급선) 하회, MA 120 (경기선) 하회, RSI 55 이상 (매수세 강함), MACD Histo 양수 (상승 모멘텀), Stoch %K < %D (하락 모멘텀), CMF 0.05 이상 (순 매수 압력 강함), BBand %B 0.5 이상 (중심선 상회)"
+    },
+    {
+        "name": "VTHO_KRW",
+        "date": "2026-03-21",
+        "closePrice": 0.9135,
+        "buyTargetPrice": 0.9150834000000002,
+        "sellTargetPrice": 0.9002129999999998,
+        "targetPrices": {
+            "buyTargetPrice": 0.9150834000000002,
+            "sellTargetPrice": 0.9002129999999998,
+            "atrStopLossPrice": 0.8101142857142857,
+            "rsi50Price": 0.8847013535499573
+        },
+        "totalScore": 2,
+        "summary": "매수 우위 포착: 긍정적인 지표가 부정적인 지표보다 많습니다. 단기 조정 시 매수 기회입니다.",
+        "scoreComment": "MA 20 (단기 추세) 상회, MA 60 (수급선) 하회, MA 120 (경기선) 하회, RSI 55 이상 (매수세 강함), MACD Histo 양수 (상승 모멘텀), Stoch %K > %D (상승 모멘텀), CMF -0.05 이하 (순 매도 압력 강함), BBand %B 0.5 이상 (중심선 상회)"
+    },
+    {
+        "name": "XPR_KRW",
+        "date": "2026-03-21",
+        "closePrice": 3.514,
+        "buyTargetPrice": 3.542170500000001,
+        "sellTargetPrice": 3.5602500000000004,
+        "targetPrices": {
+            "buyTargetPrice": 3.542170500000001,
+            "sellTargetPrice": 3.5602500000000004,
+            "atrStopLossPrice": 3.2322857142857138,
+            "rsi50Price": 3.4276493320465087
+        },
+        "totalScore": 2,
+        "summary": "매수 우위 포착: 긍정적인 지표가 부정적인 지표보다 많습니다. 단기 조정 시 매수 기회입니다.",
+        "scoreComment": "MA 20 (단기 추세) 상회, MA 60 (수급선) 하회, MA 120 (경기선) 하회, RSI 45-55 (중립), MACD Histo 양수 (상승 모멘텀), Stoch %K > %D (상승 모멘텀), CMF (-0.05 ~ 0.05) 중립, BBand %B 0.5 이상 (중심선 상회)"
+    },
+    {
+        "name": "YFI_KRW",
+        "date": "2026-03-21",
+        "closePrice": 4122000,
+        "buyTargetPrice": 4155359.9999999995,
+        "sellTargetPrice": 4183629.3831547704,
+        "targetPrices": {
+            "buyTargetPrice": 4155359.9999999995,
+            "sellTargetPrice": 4183629.3831547704,
+            "atrStopLossPrice": 3851428.5714285714,
+            "rsi50Price": 3951687.452316284
+        },
+        "totalScore": 3,
+        "summary": "강력한 매수 우위 포착: 다수의 지표가 강한 상승 모멘텀과 수급을 지지하고 있습니다.",
+        "scoreComment": "MA 20 (단기 추세) 상회, MA 60 (수급선) 하회, MA 120 (경기선) 하회, RSI 55 이상 (매수세 강함), MACD Histo 양수 (상승 모멘텀), Stoch %K > %D (상승 모멘텀), CMF (-0.05 ~ 0.05) 중립, BBand %B 0.5 이상 (중심선 상회)"
+    }
+]

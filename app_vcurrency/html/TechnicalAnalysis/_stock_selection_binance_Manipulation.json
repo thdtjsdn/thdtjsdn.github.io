@@ -1,0 +1,34 @@
+[
+  {
+    "name": "ANKRUSDT",
+    "date": "2026-03-21",
+    "closePrice": 0.005902,
+    "buyTargetPrice": 0.004781534999999999,
+    "sellTargetPrice": 0.0054149079882449234,
+    "targetPrices": {
+      "buyTargetPrice": 0.004781534999999999,
+      "sellTargetPrice": 0.0054149079882449234,
+      "atrStopLossPrice": 0.005120857142857143,
+      "rsi50Price": 0.00458479271888733
+    },
+    "totalScore": 4,
+    "summary": "강력한 매수 우위 포착: 다수의 지표가 강한 상승 모멘텀과 수급을 지지하고 있습니다.",
+    "scoreComment": "MA 20 (단기 추세) 상회, MA 60 (수급선) 상회, MA 120 (경기선) 하회, RSI 55 이상 (매수세 강함), MACD Histo 양수 (상승 모멘텀), Stoch %K > %D (상승 모멘텀), CMF -0.05 이하 (순 매도 압력 강함), BBand %B 0.5 이상 (중심선 상회)"
+  },
+  {
+    "name": "RIVERUSDT",
+    "date": "2026-03-21",
+    "closePrice": 24.696,
+    "buyTargetPrice": 21.629058,
+    "sellTargetPrice": 27.315114540668773,
+    "targetPrices": {
+      "buyTargetPrice": 21.629058,
+      "sellTargetPrice": 27.315114540668773,
+      "atrStopLossPrice": 15.467285714285715,
+      "rsi50Price": 18.588440025329593
+    },
+    "totalScore": 5,
+    "summary": "강력한 매수 우위 포착: 다수의 지표가 강한 상승 모멘텀과 수급을 지지하고 있습니다.",
+    "scoreComment": "MA 20 (단기 추세) 상회, MA 60 (수급선) 상회, MA 120 (경기선) 상회, RSI 55 이상 (매수세 강함), MACD Histo 양수 (상승 모멘텀), Stoch %K < %D (하락 모멘텀), CMF (-0.05 ~ 0.05) 중립, BBand %B 0.5 이상 (중심선 상회)"
+  }
+]

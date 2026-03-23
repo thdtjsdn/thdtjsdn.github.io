@@ -1,0 +1,322 @@
+[
+    {
+        "name": "ASTRUSDT",
+        "date": "2026-03-21",
+        "closePrice": 0.008032,
+        "buyTargetPrice": 0.008055134999999998,
+        "sellTargetPrice": 0.008511943333333334,
+        "targetPrices": {
+            "buyTargetPrice": 0.008055134999999998,
+            "sellTargetPrice": 0.008511943333333334,
+            "atrStopLossPrice": 0.007100999999999999,
+            "rsi50Price": 0.007705051971435546
+        },
+        "totalScore": 2,
+        "summary": "매수 우위 포착: 긍정적인 지표가 부정적인 지표보다 많습니다. 단기 조정 시 매수 기회입니다.",
+        "scoreComment": "MA 20 (단기 추세) 상회, MA 60 (수급선) 하회, MA 120 (경기선) 하회, RSI 55 이상 (매수세 강함), MACD Histo 양수 (상승 모멘텀), Stoch %K > %D (상승 모멘텀), CMF -0.05 이하 (순 매도 압력 강함), BBand %B 0.5 이상 (중심선 상회)"
+    },
+    {
+        "name": "B2USDT",
+        "date": "2026-03-21",
+        "closePrice": 0.7233,
+        "buyTargetPrice": 0.7297504500000003,
+        "sellTargetPrice": 0.7424692883672154,
+        "targetPrices": {
+            "buyTargetPrice": 0.7297504500000003,
+            "sellTargetPrice": 0.7424692883672154,
+            "atrStopLossPrice": 0.6723857142857144,
+            "rsi50Price": 0.709222022151947
+        },
+        "totalScore": 3,
+        "summary": "강력한 매수 우위 포착: 다수의 지표가 강한 상승 모멘텀과 수급을 지지하고 있습니다.",
+        "scoreComment": "MA 20 (단기 추세) 상회, MA 60 (수급선) 하회, MA 120 (경기선) 상회, RSI 45-55 (중립), MACD Histo 양수 (상승 모멘텀), Stoch %K > %D (상승 모멘텀), CMF -0.05 이하 (순 매도 압력 강함), BBand %B 0.5 이상 (중심선 상회)"
+    },
+    {
+        "name": "CELOUSDT",
+        "date": "2026-03-21",
+        "closePrice": 0.0844,
+        "buyTargetPrice": 0.08514660000000002,
+        "sellTargetPrice": 0.08587337363816515,
+        "targetPrices": {
+            "buyTargetPrice": 0.08514660000000002,
+            "sellTargetPrice": 0.08587337363816515,
+            "atrStopLossPrice": 0.07502857142857143,
+            "rsi50Price": 0.07936896553039552
+        },
+        "totalScore": 4,
+        "summary": "강력한 매수 우위 포착: 다수의 지표가 강한 상승 모멘텀과 수급을 지지하고 있습니다.",
+        "scoreComment": "MA 20 (단기 추세) 상회, MA 60 (수급선) 하회, MA 120 (경기선) 하회, RSI 55 이상 (매수세 강함), MACD Histo 양수 (상승 모멘텀), Stoch %K > %D (상승 모멘텀), CMF 0.05 이상 (순 매수 압력 강함), BBand %B 0.5 이상 (중심선 상회)"
+    },
+    {
+        "name": "DUSDT",
+        "date": "2026-03-21",
+        "closePrice": 0.006007,
+        "buyTargetPrice": 0.00598627,
+        "sellTargetPrice": 0.006743533500000001,
+        "targetPrices": {
+            "buyTargetPrice": 0.00598627,
+            "sellTargetPrice": 0.006743533500000001,
+            "atrStopLossPrice": 0.005215285714285715,
+            "rsi50Price": 0.007226444327354432
+        },
+        "totalScore": -8,
+        "summary": "강력한 매도 우위 포착: 추세가 붕괴되었으며, 하락 모멘텀이 강합니다. 관망 또는 손절이 필요한 시점입니다.",
+        "scoreComment": "MA 20 (단기 추세) 하회, MA 60 (수급선) 하회, MA 120 (경기선) 하회, RSI 45 이하 (매도세 강함), MACD Histo 음수 (하락 모멘텀), Stoch %K < %D (하락 모멘텀), CMF -0.05 이하 (순 매도 압력 강함), BBand %B 0.5 이하 (중심선 하회)"
+    },
+    {
+        "name": "ETHWUSDT",
+        "date": "2026-03-21",
+        "closePrice": 0.2698,
+        "buyTargetPrice": 0.26866,
+        "sellTargetPrice": 0.2945745,
+        "targetPrices": {
+            "buyTargetPrice": 0.26866,
+            "sellTargetPrice": 0.2945745,
+            "atrStopLossPrice": 0.23311428571428572,
+            "rsi50Price": 0.3075129133224487
+        },
+        "totalScore": -8,
+        "summary": "강력한 매도 우위 포착: 추세가 붕괴되었으며, 하락 모멘텀이 강합니다. 관망 또는 손절이 필요한 시점입니다.",
+        "scoreComment": "MA 20 (단기 추세) 하회, MA 60 (수급선) 하회, MA 120 (경기선) 하회, RSI 45 이하 (매도세 강함), MACD Histo 음수 (하락 모멘텀), Stoch %K < %D (하락 모멘텀), CMF -0.05 이하 (순 매도 압력 강함), BBand %B 0.5 이하 (중심선 하회)"
+    },
+    {
+        "name": "FARTCOINUSDT",
+        "date": "2026-03-21",
+        "closePrice": 0.1962,
+        "buyTargetPrice": 0.19732845000000007,
+        "sellTargetPrice": 0.21324466666666667,
+        "targetPrices": {
+            "buyTargetPrice": 0.19732845000000007,
+            "sellTargetPrice": 0.21324466666666667,
+            "atrStopLossPrice": 0.16084285714285715,
+            "rsi50Price": 0.1805019567489624
+        },
+        "totalScore": 1,
+        "summary": "매수 우위 포착: 긍정적인 지표가 부정적인 지표보다 많습니다. 단기 조정 시 매수 기회입니다.",
+        "scoreComment": "MA 20 (단기 추세) 상회, MA 60 (수급선) 하회, MA 120 (경기선) 하회, RSI 55 이상 (매수세 강함), MACD Histo 양수 (상승 모멘텀), Stoch %K < %D (하락 모멘텀), CMF (-0.05 ~ 0.05) 중립, BBand %B 0.5 이상 (중심선 상회)"
+    },
+    {
+        "name": "FLOCKUSDT",
+        "date": "2026-03-21",
+        "closePrice": 0.06168,
+        "buyTargetPrice": 0.06191922,
+        "sellTargetPrice": 0.0615494,
+        "targetPrices": {
+            "buyTargetPrice": 0.06191922,
+            "sellTargetPrice": 0.0615494,
+            "atrStopLossPrice": 0.05495,
+            "rsi50Price": 0.05877716194152832
+        },
+        "totalScore": 2,
+        "summary": "매수 우위 포착: 긍정적인 지표가 부정적인 지표보다 많습니다. 단기 조정 시 매수 기회입니다.",
+        "scoreComment": "MA 20 (단기 추세) 상회, MA 60 (수급선) 하회, MA 120 (경기선) 하회, RSI 55 이상 (매수세 강함), MACD Histo 양수 (상승 모멘텀), Stoch %K > %D (상승 모멘텀), CMF -0.05 이하 (순 매도 압력 강함), BBand %B 0.5 이상 (중심선 상회)"
+    },
+    {
+        "name": "FLUIDUSDT",
+        "date": "2026-03-21",
+        "closePrice": 2.347,
+        "buyTargetPrice": 2.3300970000000003,
+        "sellTargetPrice": 2.340843333333333,
+        "targetPrices": {
+            "buyTargetPrice": 2.3300970000000003,
+            "sellTargetPrice": 2.340843333333333,
+            "atrStopLossPrice": 2.0581428571428573,
+            "rsi50Price": 2.2831353387832642
+        },
+        "totalScore": 1,
+        "summary": "매수 우위 포착: 긍정적인 지표가 부정적인 지표보다 많습니다. 단기 조정 시 매수 기회입니다.",
+        "scoreComment": "MA 20 (단기 추세) 상회, MA 60 (수급선) 하회, MA 120 (경기선) 하회, RSI 45-55 (중립), MACD Histo 양수 (상승 모멘텀), Stoch %K < %D (하락 모멘텀), CMF 0.05 이상 (순 매수 압력 강함), BBand %B 0.5 이상 (중심선 상회)"
+    },
+    {
+        "name": "HOLOUSDT",
+        "date": "2026-03-21",
+        "closePrice": 0.06182,
+        "buyTargetPrice": 0.06171231000000001,
+        "sellTargetPrice": 0.06556583333333334,
+        "targetPrices": {
+            "buyTargetPrice": 0.06171231000000001,
+            "sellTargetPrice": 0.06556583333333334,
+            "atrStopLossPrice": 0.05507857142857143,
+            "rsi50Price": 0.06104914838790895
+        },
+        "totalScore": 3,
+        "summary": "강력한 매수 우위 포착: 다수의 지표가 강한 상승 모멘텀과 수급을 지지하고 있습니다.",
+        "scoreComment": "MA 20 (단기 추세) 상회, MA 60 (수급선) 하회, MA 120 (경기선) 하회, RSI 45-55 (중립), MACD Histo 양수 (상승 모멘텀), Stoch %K > %D (상승 모멘텀), CMF 0.05 이상 (순 매수 압력 강함), BBand %B 0.5 이상 (중심선 상회)"
+    },
+    {
+        "name": "IDUSDT",
+        "date": "2026-03-21",
+        "closePrice": 0.04058,
+        "buyTargetPrice": 0.0402889,
+        "sellTargetPrice": 0.04116815999999999,
+        "targetPrices": {
+            "buyTargetPrice": 0.0402889,
+            "sellTargetPrice": 0.04116815999999999,
+            "atrStopLossPrice": 0.03744857142857143,
+            "rsi50Price": 0.04362109285354614
+        },
+        "totalScore": -6,
+        "summary": "강력한 매도 우위 포착: 추세가 붕괴되었으며, 하락 모멘텀이 강합니다. 관망 또는 손절이 필요한 시점입니다.",
+        "scoreComment": "MA 20 (단기 추세) 하회, MA 60 (수급선) 하회, MA 120 (경기선) 하회, RSI 45 이하 (매도세 강함), MACD Histo 양수 (상승 모멘텀), Stoch %K < %D (하락 모멘텀), CMF -0.05 이하 (순 매도 압력 강함), BBand %B 0.5 이하 (중심선 하회)"
+    },
+    {
+        "name": "IOTAUSDT",
+        "date": "2026-03-21",
+        "closePrice": 0.0614,
+        "buyTargetPrice": 0.061711,
+        "sellTargetPrice": 0.0636669,
+        "targetPrices": {
+            "buyTargetPrice": 0.061711,
+            "sellTargetPrice": 0.0636669,
+            "atrStopLossPrice": 0.056271428571428576,
+            "rsi50Price": 0.06578692722320556
+        },
+        "totalScore": -6,
+        "summary": "강력한 매도 우위 포착: 추세가 붕괴되었으며, 하락 모멘텀이 강합니다. 관망 또는 손절이 필요한 시점입니다.",
+        "scoreComment": "MA 20 (단기 추세) 하회, MA 60 (수급선) 하회, MA 120 (경기선) 하회, RSI 45 이하 (매도세 강함), MACD Histo 양수 (상승 모멘텀), Stoch %K < %D (하락 모멘텀), CMF -0.05 이하 (순 매도 압력 강함), BBand %B 0.5 이하 (중심선 하회)"
+    },
+    {
+        "name": "KOMAUSDT",
+        "date": "2026-03-21",
+        "closePrice": 0.006631,
+        "buyTargetPrice": 0.006615500000000001,
+        "sellTargetPrice": 0.007561669500000001,
+        "targetPrices": {
+            "buyTargetPrice": 0.006615500000000001,
+            "sellTargetPrice": 0.007561669500000001,
+            "atrStopLossPrice": 0.005545857142857142,
+            "rsi50Price": 0.00760723884677887
+        },
+        "totalScore": -8,
+        "summary": "강력한 매도 우위 포착: 추세가 붕괴되었으며, 하락 모멘텀이 강합니다. 관망 또는 손절이 필요한 시점입니다.",
+        "scoreComment": "MA 20 (단기 추세) 하회, MA 60 (수급선) 하회, MA 120 (경기선) 하회, RSI 45 이하 (매도세 강함), MACD Histo 음수 (하락 모멘텀), Stoch %K < %D (하락 모멘텀), CMF -0.05 이하 (순 매도 압력 강함), BBand %B 0.5 이하 (중심선 하회)"
+    },
+    {
+        "name": "LTCUSDT",
+        "date": "2026-03-21",
+        "closePrice": 56.39,
+        "buyTargetPrice": 56.631465000000006,
+        "sellTargetPrice": 57.240066666666664,
+        "targetPrices": {
+            "buyTargetPrice": 56.631465000000006,
+            "sellTargetPrice": 57.240066666666664,
+            "atrStopLossPrice": 52.629999999999995,
+            "rsi50Price": 55.71116415977478
+        },
+        "totalScore": 1,
+        "summary": "매수 우위 포착: 긍정적인 지표가 부정적인 지표보다 많습니다. 단기 조정 시 매수 기회입니다.",
+        "scoreComment": "MA 20 (단기 추세) 상회, MA 60 (수급선) 하회, MA 120 (경기선) 하회, RSI 45-55 (중립), MACD Histo 양수 (상승 모멘텀), Stoch %K < %D (하락 모멘텀), CMF 0.05 이상 (순 매수 압력 강함), BBand %B 0.5 이상 (중심선 상회)"
+    },
+    {
+        "name": "MASKUSDT",
+        "date": "2026-03-21",
+        "closePrice": 0.4754,
+        "buyTargetPrice": 0.47872605000000007,
+        "sellTargetPrice": 0.48904340062227464,
+        "targetPrices": {
+            "buyTargetPrice": 0.47872605000000007,
+            "sellTargetPrice": 0.48904340062227464,
+            "atrStopLossPrice": 0.42474285714285714,
+            "rsi50Price": 0.4569335107803345
+        },
+        "totalScore": 3,
+        "summary": "강력한 매수 우위 포착: 다수의 지표가 강한 상승 모멘텀과 수급을 지지하고 있습니다.",
+        "scoreComment": "MA 20 (단기 추세) 상회, MA 60 (수급선) 하회, MA 120 (경기선) 하회, RSI 55 이상 (매수세 강함), MACD Histo 양수 (상승 모멘텀), Stoch %K > %D (상승 모멘텀), CMF (-0.05 ~ 0.05) 중립, BBand %B 0.5 이상 (중심선 상회)"
+    },
+    {
+        "name": "PHBUSDT",
+        "date": "2026-03-21",
+        "closePrice": 0.1195,
+        "buyTargetPrice": 0.11918,
+        "sellTargetPrice": 0.14077304999999998,
+        "targetPrices": {
+            "buyTargetPrice": 0.11918,
+            "sellTargetPrice": 0.14077304999999998,
+            "atrStopLossPrice": 0.09265714285714285,
+            "rsi50Price": 0.1459361338615417
+        },
+        "totalScore": -8,
+        "summary": "강력한 매도 우위 포착: 추세가 붕괴되었으며, 하락 모멘텀이 강합니다. 관망 또는 손절이 필요한 시점입니다.",
+        "scoreComment": "MA 20 (단기 추세) 하회, MA 60 (수급선) 하회, MA 120 (경기선) 하회, RSI 45 이하 (매도세 강함), MACD Histo 음수 (하락 모멘텀), Stoch %K < %D (하락 모멘텀), CMF -0.05 이하 (순 매도 압력 강함), BBand %B 0.5 이하 (중심선 하회)"
+    },
+    {
+        "name": "SOONUSDT",
+        "date": "2026-03-21",
+        "closePrice": 0.1281,
+        "buyTargetPrice": 0.126856,
+        "sellTargetPrice": 0.14935140000000002,
+        "targetPrices": {
+            "buyTargetPrice": 0.126856,
+            "sellTargetPrice": 0.14935140000000002,
+            "atrStopLossPrice": 0.1078,
+            "rsi50Price": 0.1577529089927673
+        },
+        "totalScore": -8,
+        "summary": "강력한 매도 우위 포착: 추세가 붕괴되었으며, 하락 모멘텀이 강합니다. 관망 또는 손절이 필요한 시점입니다.",
+        "scoreComment": "MA 20 (단기 추세) 하회, MA 60 (수급선) 하회, MA 120 (경기선) 하회, RSI 45 이하 (매도세 강함), MACD Histo 음수 (하락 모멘텀), Stoch %K < %D (하락 모멘텀), CMF -0.05 이하 (순 매도 압력 강함), BBand %B 0.5 이하 (중심선 하회)"
+    },
+    {
+        "name": "STBLUSDT",
+        "date": "2026-03-21",
+        "closePrice": 0.03802,
+        "buyTargetPrice": 0.037945379999999994,
+        "sellTargetPrice": 0.04005323333333334,
+        "targetPrices": {
+            "buyTargetPrice": 0.037945379999999994,
+            "sellTargetPrice": 0.04005323333333334,
+            "atrStopLossPrice": 0.032897142857142854,
+            "rsi50Price": 0.0374638278388977
+        },
+        "totalScore": 2,
+        "summary": "매수 우위 포착: 긍정적인 지표가 부정적인 지표보다 많습니다. 단기 조정 시 매수 기회입니다.",
+        "scoreComment": "MA 20 (단기 추세) 상회, MA 60 (수급선) 하회, MA 120 (경기선) 하회, RSI 45-55 (중립), MACD Histo 양수 (상승 모멘텀), Stoch %K > %D (상승 모멘텀), CMF (-0.05 ~ 0.05) 중립, BBand %B 0.5 이상 (중심선 상회)"
+    },
+    {
+        "name": "STRKUSDT",
+        "date": "2026-03-21",
+        "closePrice": 0.0358,
+        "buyTargetPrice": 0.0355116,
+        "sellTargetPrice": 0.038705535,
+        "targetPrices": {
+            "buyTargetPrice": 0.0355116,
+            "sellTargetPrice": 0.038705535,
+            "atrStopLossPrice": 0.03176142857142857,
+            "rsi50Price": 0.04130679149627685
+        },
+        "totalScore": -6,
+        "summary": "강력한 매도 우위 포착: 추세가 붕괴되었으며, 하락 모멘텀이 강합니다. 관망 또는 손절이 필요한 시점입니다.",
+        "scoreComment": "MA 20 (단기 추세) 하회, MA 60 (수급선) 하회, MA 120 (경기선) 하회, RSI 45 이하 (매도세 강함), MACD Histo 양수 (상승 모멘텀), Stoch %K < %D (하락 모멘텀), CMF -0.05 이하 (순 매도 압력 강함), BBand %B 0.5 이하 (중심선 하회)"
+    },
+    {
+        "name": "USDCUSDT",
+        "date": "2026-03-21",
+        "closePrice": 0.999555,
+        "buyTargetPrice": 0.9898943009999998,
+        "sellTargetPrice": 1.0095933066666665,
+        "targetPrices": {
+            "buyTargetPrice": 0.9898943009999998,
+            "sellTargetPrice": 1.0095933066666665,
+            "atrStopLossPrice": 0.9993175714285714,
+            "rsi50Price": 0.9995197297525406
+        },
+        "totalScore": 2,
+        "summary": "매수 우위 포착: 긍정적인 지표가 부정적인 지표보다 많습니다. 단기 조정 시 매수 기회입니다.",
+        "scoreComment": "MA 20 (단기 추세) 상회, MA 60 (수급선) 하회, MA 120 (경기선) 하회, RSI 45-55 (중립), MACD Histo 양수 (상승 모멘텀), Stoch %K > %D (상승 모멘텀), CMF (-0.05 ~ 0.05) 중립, BBand %B 0.5 이상 (중심선 상회)"
+    },
+    {
+        "name": "ZORAUSDT",
+        "date": "2026-03-21",
+        "closePrice": 0.01674,
+        "buyTargetPrice": 0.0166347,
+        "sellTargetPrice": 0.017114624999999998,
+        "targetPrices": {
+            "buyTargetPrice": 0.0166347,
+            "sellTargetPrice": 0.017114624999999998,
+            "atrStopLossPrice": 0.015048571428571429,
+            "rsi50Price": 0.018376122608184824
+        },
+        "totalScore": -6,
+        "summary": "강력한 매도 우위 포착: 추세가 붕괴되었으며, 하락 모멘텀이 강합니다. 관망 또는 손절이 필요한 시점입니다.",
+        "scoreComment": "MA 20 (단기 추세) 하회, MA 60 (수급선) 하회, MA 120 (경기선) 하회, RSI 45 이하 (매도세 강함), MACD Histo 양수 (상승 모멘텀), Stoch %K < %D (하락 모멘텀), CMF -0.05 이하 (순 매도 압력 강함), BBand %B 0.5 이하 (중심선 하회)"
+    }
+]
