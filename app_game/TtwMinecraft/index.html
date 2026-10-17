@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Basic SEO (Search Engine Optimization) -->
+	<title>TTW Minecraft - Web Based Voxel Adventure</title>
+	<meta name="description" content="Play TTW Minecraft, an endless web-based voxel sandbox game. Explore, build, and survive directly in your browser with zero downloads.">
+	<meta name="keywords" content="web based minecraft, voxel game, browser sandbox game, TTW Minecraft, webgl game, multiplayer web game, free browser games">
+	<meta name="author" content="TTW Games">
+	<meta name="robots" content="index, follow">
+	<link rel="canonical" href="http://thdtjsdn.com:49310/app_game/html_page/TtwMinecraft/">
+
+	<!-- Open Graph / Facebook (SEO & GEO) -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://thdtjsdn.com:49310/app_game/html_page/TtwMinecraft/">
+	<meta property="og:title" content="TTW Minecraft - Web Based Voxel Adventure">
+	<meta property="og:description" content="Experience the ultimate web-based voxel sandbox adventure right in your browser. Procedurally generated worlds, multiplayer, and more.">
+	<meta property="og:image" content="http://thdtjsdn.com:49310/app_game/html_page/TtwMinecraft/index.png">
+
+	<!-- Twitter (SEO & GEO) -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:url" content="http://thdtjsdn.com:49310/app_game/html_page/TtwMinecraft/">
+	<meta name="twitter:title" content="TTW Minecraft - Web Based Voxel Adventure">
+	<meta name="twitter:description" content="Experience the ultimate web-based voxel sandbox adventure right in your browser. Procedurally generated worlds, multiplayer, and more.">
+	<meta name="twitter:image" content="http://thdtjsdn.com:49310/app_game/html_page/TtwMinecraft/index.png">
+
+	<!-- AEO / GEO (AI Engine & Generative Engine Optimization) Metadata -->
+	<meta name="publisher" content="TTW Games">
+	<meta name="application-name" content="TTW Minecraft">
+
+	<!-- JSON-LD Structured Data (JSON 타입 SEO) -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "VideoGame",
+		"name": "TTW Minecraft",
+		"description": "An endless web-based voxel sandbox game. Explore, build, and survive directly in your browser using WebGL and WebSockets.",
+		"url": "http://thdtjsdn.com:49310/app_game/html_page/TtwMinecraft/",
+		"image": "http://thdtjsdn.com:49310/app_game/html_page/TtwMinecraft/index.png",
+		"playMode": ["SinglePlayer", "MultiPlayer"],
+		"applicationCategory": "Game",
+		"operatingSystem": "Web Browser",
+		"genre": ["Sandbox", "Adventure", "Voxel"],
+		"publisher": {
+			"@type": "Organization",
+			"name": "TTW Games"
+		},
+		"offers": {
+			"@type": "Offer",
+			"price": "0",
+			"priceCurrency": "USD",
+			"availability": "https://schema.org/InStock"
+		}
+	}
+	</script>
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="index.css">
+	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+	<nav class="navbar">
+		<div class="nav-container">
+			<div class="logo">
+				<span class="logo-ttw">TTW</span>
+				<span class="logo-mine">Minecraft</span>
+			</div>
+			<ul class="nav-links">
+				<li><a href="#" id="nav-features">Features</a></li>
+				<li><a href="http://thdtjsdn.com:49310/app_game/html_page/TtwMinecraft/index.html.gz" class="btn-primary small">Play Now</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<header class="hero">
+		<div class="hero-overlay"></div>
+		<div class="hero-content fade-in">
+			<h1 class="hero-title">Shape Your World.</h1>
+			<p class="hero-subtitle">Experience the ultimate web-based voxel sandbox adventure right in your browser. No downloads, just pure creativity.</p>
+			<div class="hero-actions">
+				<a href="http://thdtjsdn.com:49310/app_game/html_page/TtwMinecraft/index.html.gz" class="btn-primary large pulse">Start Playing</a>
+				<button id="btn-features" class="btn-secondary large">Discover Features</button>
+			</div>
+		</div>
+	</header>
+
+	<!-- Features Modal -->
+	<div id="features-modal" class="modal-overlay">
+		<div class="modal-content glass">
+			<button id="close-modal" class="close-modal">&times;</button>
+			<h2 class="modal-title">Game Features</h2>
+			<div class="features-grid">
+				<div class="feature-card glass">
+					<div class="feature-icon">🌍</div>
+					<h3>Endless Worlds</h3>
+					<p>Procedurally generated infinite terrains with diverse biomes, mountains, and caves to explore.</p>
+				</div>
+				<div class="feature-card glass">
+					<div class="feature-icon">⚒️</div>
+					<h3>Craft & Build</h3>
+					<p>Gather resources and unleash your imagination. Build everything from simple homes to majestic castles.</p>
+				</div>
+				<div class="feature-card glass">
+					<div class="feature-icon">🌩️</div>
+					<h3>Dynamic Weather</h3>
+					<p>Experience changing weather systems and realistic day-night cycles that affect gameplay.</p>
+				</div>
+				<div class="feature-card glass">
+					<div class="feature-icon">👥</div>
+					<h3>Multiplayer Ready</h3>
+					<p>Join friends online in a seamless multiplayer experience. Collaborate or compete in real-time.</p>
+				</div>
+			</div>
+			
+			<div class="modal-footer">
+				<p class="copyright">&copy; 2026 TTW Games. Built for the Web.</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		const modal = document.getElementById('features-modal');
+		const btnFeatures = document.getElementById('btn-features');
+		const navFeatures = document.getElementById('nav-features');
+		const closeBtn = document.getElementById('close-modal');
+
+		function openModal(e) {
+			if (e) e.preventDefault();
+			modal.classList.add('active');
+		}
+
+		function closeModal() {
+			modal.classList.remove('active');
+		}
+
+		btnFeatures.addEventListener('click', openModal);
+		navFeatures.addEventListener('click', openModal);
+		closeBtn.addEventListener('click', closeModal);
+		
+		modal.addEventListener('click', (e) => {
+			if(e.target === modal) closeModal();
+		});
+	</script>
+</body>
+</html>
