@@ -1,0 +1,2305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AI 중요 뉴스 증시 브리핑 [2026-10-25 21:52]</title>
+	<SCRIPT type="text/javascript" src="https://thdtjsdn.com:49311/js-api/TAPI.js"></SCRIPT>
+	<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<style>
+		:root {
+			--bg-black: #05070a;
+			--bg-card: #0d1118;
+			--bg-surface: #131822;
+			--bg-input: #171d2b;
+			--border-color: #212838;
+			--border-hover: #343e56;
+			--point-red: #ef4444;
+			--point-green: #22c55e;
+			--point-gold: #f59e0b;
+			--point-blue: #38bdf8;
+			--text-white: #ffffff;
+			--text-sub: #cbd5e1;
+			--text-muted: #8492a6;
+			--font-main: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+		}
+		* { box-sizing: border-box; margin: 0; padding: 0; font-family: var(--font-main); }
+		body {
+			background-color: var(--bg-black);
+			color: var(--text-sub);
+			line-height: 1.5;
+			padding: 20px;
+			min-height: 100vh;
+		}
+		.container {
+			max-width: 1400px;
+			margin: 0 auto;
+		}
+		.dashboard-header {
+			background: var(--bg-card);
+			border: 1px solid var(--border-color);
+			border-radius: 12px;
+			padding: 20px 24px;
+			margin-bottom: 16px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 16px;
+		}
+		.brand-cluster {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+		}
+		.brand-icon {
+			font-size: 26px;
+			color: var(--point-red);
+		}
+		.brand-title {
+			font-size: 20px;
+			font-weight: 800;
+			color: var(--text-white);
+		}
+		.brand-sub {
+			font-size: 12px;
+			color: var(--text-muted);
+		}
+		.stats-cluster {
+			display: flex;
+			gap: 12px;
+			flex-wrap: wrap;
+		}
+		.stat-pill {
+			background: var(--bg-surface);
+			border: 1px solid var(--border-color);
+			padding: 8px 14px;
+			border-radius: 8px;
+			text-align: right;
+		}
+		.stat-pill-label {
+			font-size: 11px;
+			color: var(--text-muted);
+		}
+		.stat-pill-val {
+			font-size: 16px;
+			font-weight: 800;
+			color: var(--text-white);
+		}
+		.stat-pill-val.highlight {
+			color: var(--point-red);
+		}
+		.controls-bar {
+			background: var(--bg-card);
+			border: 1px solid var(--border-color);
+			border-radius: 12px;
+			padding: 14px 18px;
+			margin-bottom: 20px;
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+		}
+		.search-box {
+			position: relative;
+			width: 100%;
+		}
+		.search-icon {
+			position: absolute;
+			left: 14px;
+			top: 50%;
+			transform: translateY(-50%);
+			color: var(--text-muted);
+			font-size: 14px;
+		}
+		.search-input {
+			width: 100%;
+			background: var(--bg-input);
+			border: 1px solid var(--border-color);
+			border-radius: 8px;
+			padding: 10px 14px 10px 38px;
+			color: var(--text-white);
+			font-size: 13px;
+			outline: none;
+			transition: border-color 0.2s;
+		}
+		.search-input:focus {
+			border-color: var(--point-red);
+		}
+		.filter-tabs {
+			display: flex;
+			gap: 6px;
+			flex-wrap: wrap;
+		}
+		.filter-tab-btn {
+			background: var(--bg-surface);
+			border: 1px solid var(--border-color);
+			color: var(--text-sub);
+			padding: 6px 12px;
+			border-radius: 6px;
+			font-size: 12px;
+			font-weight: 600;
+			cursor: pointer;
+			transition: all 0.15s;
+		}
+		.filter-tab-btn:hover {
+			border-color: var(--point-red);
+			color: var(--text-white);
+		}
+		.filter-tab-btn.active {
+			background: var(--point-red);
+			border-color: var(--point-red);
+			color: var(--text-white);
+			font-weight: 700;
+		}
+		.news-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+			gap: 16px;
+		}
+		.news-card {
+			background: var(--bg-card);
+			border: 1px solid var(--border-color);
+			border-radius: 12px;
+			padding: 18px 20px;
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+			transition: transform 0.15s, border-color 0.15s;
+		}
+		.news-card:hover {
+			transform: translateY(-2px);
+			border-color: var(--border-hover);
+		}
+		.card-meta-row {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.badge-cluster {
+			display: flex;
+			gap: 6px;
+			align-items: center;
+		}
+		.importance-badge {
+			font-size: 10px;
+			font-weight: 800;
+			padding: 2px 7px;
+			border-radius: 4px;
+			letter-spacing: 0.5px;
+		}
+		.badge-urgent { background: rgba(239, 68, 68, 0.25); border: 1px solid var(--point-red); color: #fca5a5; }
+		.badge-high { background: rgba(245, 158, 11, 0.2); border: 1px solid var(--point-gold); color: #fde68a; }
+		.badge-normal { background: rgba(148, 163, 184, 0.2); border: 1px solid #475569; color: #cbd5e1; }
+		.sector-badge {
+			background: var(--bg-surface);
+			border: 1px solid var(--border-color);
+			color: var(--point-blue);
+			font-size: 11px;
+			font-weight: 700;
+			padding: 2px 7px;
+			border-radius: 4px;
+		}
+		.impact-badge {
+			font-size: 11px;
+			font-weight: 700;
+			padding: 2px 7px;
+			border-radius: 4px;
+		}
+		.impact-bull { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.4); }
+		.impact-bear { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); }
+		.impact-neutral { background: rgba(148, 163, 184, 0.15); color: #94a3b8; border: 1px solid rgba(148, 163, 184, 0.3); }
+		.card-index { font-size: 11px; color: var(--text-muted); font-weight: 700; }
+		.card-title {
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 1.45;
+			color: var(--text-white);
+			word-break: keep-all;
+		}
+		.summary-list {
+			list-style: none;
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+			background: rgba(5, 7, 10, 0.3);
+			padding: 10px 12px;
+			border-radius: 6px;
+			border-left: 2px solid var(--point-red);
+		}
+		.summary-list li {
+			font-size: 13px;
+			color: var(--text-sub);
+			line-height: 1.45;
+			position: relative;
+			padding-left: 12px;
+		}
+		.summary-list li::before {
+			content: "•";
+			position: absolute;
+			left: 0;
+			color: var(--point-red);
+			font-weight: 800;
+		}
+		.reason-box {
+			background: var(--bg-surface);
+			border-radius: 6px;
+			padding: 8px 10px;
+			font-size: 12px;
+			color: var(--text-sub);
+			line-height: 1.4;
+		}
+		.reason-label { font-weight: 700; color: var(--point-gold); margin-right: 4px; }
+		.stocks-cluster {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 6px;
+		}
+		.stock-tag {
+			background: rgba(56, 189, 248, 0.12);
+			border: 1px solid rgba(56, 189, 248, 0.3);
+			color: var(--point-blue);
+			font-size: 11px;
+			font-weight: 700;
+			padding: 2px 7px;
+			border-radius: 4px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header class="dashboard-header">
+			<div class="brand-cluster">
+				<i class="fa-solid fa-bolt-lightning brand-icon"></i>
+				<div>
+					<div class="brand-title">AI 핵심 중요 뉴스 증시 브리핑</div>
+					<div class="brand-sub"><i class="fa-regular fa-clock"></i> 분석 일시: 2026-10-25 21:52</div>
+				</div>
+			</div>
+			<div class="stats-cluster">
+				<div class="stat-pill">
+					<div class="stat-pill-label">전체 스캔 기사</div>
+					<div class="stat-pill-val">1,048개</div>
+				</div>
+				<div class="stat-pill">
+					<div class="stat-pill-label">1차 키워드 통과</div>
+					<div class="stat-pill-val" style="color: var(--point-blue);">1,048개</div>
+				</div>
+				<div class="stat-pill">
+					<div class="stat-pill-label">엄선된 중요 뉴스</div>
+					<div class="stat-pill-val highlight">109개</div>
+				</div>
+				<div class="stat-pill">
+					<div class="stat-pill-label">총 분석 소요 시간</div>
+					<div class="stat-pill-val" style="color: var(--point-green);">0초</div>
+				</div>
+			</div>
+		</header>
+		<section class="controls-bar">
+			<div class="search-box">
+				<i class="fa-solid fa-magnifying-glass search-icon"></i>
+				<input type="text" id="news-search" class="search-input" placeholder="키워드, 종목명, 섹터명 실시간 검색...">
+			</div>
+			<div class="filter-tabs" id="sector-filter-tabs">
+				<button class="filter-tab-btn active" data-sector="ALL">전체보기 (109)</button><button class="filter-tab-btn" data-sector="반도체">반도체 (3)</button><button class="filter-tab-btn" data-sector="바이오">바이오 (3)</button><button class="filter-tab-btn" data-sector="매크로">매크로 (3)</button><button class="filter-tab-btn" data-sector="건설/부동산">건설/부동산 (3)</button><button class="filter-tab-btn" data-sector="매크로/정책">매크로/정책 (3)</button><button class="filter-tab-btn" data-sector="매크로/금융">매크로/금융 (2)</button><button class="filter-tab-btn" data-sector="매크로, 금융">매크로, 금융 (2)</button><button class="filter-tab-btn" data-sector="바이오, 헬스케어">바이오, 헬스케어 (2)</button><button class="filter-tab-btn" data-sector="방산">방산 (2)</button><button class="filter-tab-btn" data-sector="자동차/2차전지">자동차/2차전지 (2)</button><button class="filter-tab-btn" data-sector="방산, 에너지, 매크로">방산, 에너지, 매크로 (1)</button><button class="filter-tab-btn" data-sector="매크로, AI, 에너지">매크로, AI, 에너지 (1)</button><button class="filter-tab-btn" data-sector="에너지, 방산">에너지, 방산 (1)</button><button class="filter-tab-btn" data-sector="방산, 보안">방산, 보안 (1)</button><button class="filter-tab-btn" data-sector="AI, 로봇, 바이오">AI, 로봇, 바이오 (1)</button><button class="filter-tab-btn" data-sector="매크로, AI, 반도체">매크로, AI, 반도체 (1)</button><button class="filter-tab-btn" data-sector="매크로, 외환">매크로, 외환 (1)</button><button class="filter-tab-btn" data-sector="반도체/모바일">반도체/모바일 (1)</button><button class="filter-tab-btn" data-sector="로봇, 조선, 건설기계">로봇, 조선, 건설기계 (1)</button><button class="filter-tab-btn" data-sector="매크로, 대형주">매크로, 대형주 (1)</button><button class="filter-tab-btn" data-sector="매크로/반도체/대형주">매크로/반도체/대형주 (1)</button><button class="filter-tab-btn" data-sector="매크로/시장전반">매크로/시장전반 (1)</button><button class="filter-tab-btn" data-sector="반도체, 매크로">반도체, 매크로 (1)</button><button class="filter-tab-btn" data-sector="방산/에너지">방산/에너지 (1)</button><button class="filter-tab-btn" data-sector="반도체/매크로">반도체/매크로 (1)</button><button class="filter-tab-btn" data-sector="방산/드론">방산/드론 (1)</button><button class="filter-tab-btn" data-sector="IT/스마트폰">IT/스마트폰 (1)</button><button class="filter-tab-btn" data-sector="자동차/매크로">자동차/매크로 (1)</button><button class="filter-tab-btn" data-sector="반도체, IT, 매크로">반도체, IT, 매크로 (1)</button><button class="filter-tab-btn" data-sector="매크로/반도체">매크로/반도체 (1)</button><button class="filter-tab-btn" data-sector="매크로, 에너지, 방산">매크로, 에너지, 방산 (1)</button><button class="filter-tab-btn" data-sector="에너지, 원자재">에너지, 원자재 (1)</button><button class="filter-tab-btn" data-sector="매크로, 채권, 성장주">매크로, 채권, 성장주 (1)</button><button class="filter-tab-btn" data-sector="매크로, 반도체, 자동차">매크로, 반도체, 자동차 (1)</button><button class="filter-tab-btn" data-sector="보안, IT 인프라, 금융">보안, IT 인프라, 금융 (1)</button><button class="filter-tab-btn" data-sector="금융/은행">금융/은행 (1)</button><button class="filter-tab-btn" data-sector="매크로/건설/내수">매크로/건설/내수 (1)</button><button class="filter-tab-btn" data-sector="재생에너지, 인프라">재생에너지, 인프라 (1)</button><button class="filter-tab-btn" data-sector="자동차">자동차 (1)</button><button class="filter-tab-btn" data-sector="방산/매크로">방산/매크로 (1)</button><button class="filter-tab-btn" data-sector="매크로, 정책">매크로, 정책 (1)</button><button class="filter-tab-btn" data-sector="매크로, 정책, 자동차, 에너지">매크로, 정책, 자동차, 에너지 (1)</button><button class="filter-tab-btn" data-sector="매크로, 에너지">매크로, 에너지 (1)</button><button class="filter-tab-btn" data-sector="게임, AI">게임, AI (1)</button><button class="filter-tab-btn" data-sector="보안/IT인프라">보안/IT인프라 (1)</button><button class="filter-tab-btn" data-sector="우주항공, 방산">우주항공, 방산 (1)</button><button class="filter-tab-btn" data-sector="방산, 안보">방산, 안보 (1)</button><button class="filter-tab-btn" data-sector="매크로, 내수 소비재">매크로, 내수 소비재 (1)</button><button class="filter-tab-btn" data-sector="매크로, 내수 소비">매크로, 내수 소비 (1)</button><button class="filter-tab-btn" data-sector="AI, 소프트웨어">AI, 소프트웨어 (1)</button><button class="filter-tab-btn" data-sector="매크로, AI, 기술주">매크로, AI, 기술주 (1)</button><button class="filter-tab-btn" data-sector="방산, 통신, 우주항공">방산, 통신, 우주항공 (1)</button><button class="filter-tab-btn" data-sector="반도체, 건설, 정책">반도체, 건설, 정책 (1)</button><button class="filter-tab-btn" data-sector="매크로, 반도체">매크로, 반도체 (1)</button><button class="filter-tab-btn" data-sector="보안, IT">보안, IT (1)</button><button class="filter-tab-btn" data-sector="AI, 반도체">AI, 반도체 (1)</button><button class="filter-tab-btn" data-sector="AI/보안/기술주">AI/보안/기술주 (1)</button><button class="filter-tab-btn" data-sector="건설기계/AI">건설기계/AI (1)</button><button class="filter-tab-btn" data-sector="매크로/반도체/IT">매크로/반도체/IT (1)</button><button class="filter-tab-btn" data-sector="IT, 반도체">IT, 반도체 (1)</button><button class="filter-tab-btn" data-sector="매크로, 규제">매크로, 규제 (1)</button><button class="filter-tab-btn" data-sector="매크로/에너지">매크로/에너지 (1)</button><button class="filter-tab-btn" data-sector="가전/IT">가전/IT (1)</button><button class="filter-tab-btn" data-sector="규제/거버넌스">규제/거버넌스 (1)</button><button class="filter-tab-btn" data-sector="AI/매크로">AI/매크로 (1)</button><button class="filter-tab-btn" data-sector="비철금속, 지배구조">비철금속, 지배구조 (1)</button><button class="filter-tab-btn" data-sector="자동차, 모빌리티">자동차, 모빌리티 (1)</button><button class="filter-tab-btn" data-sector="물류/조선">물류/조선 (1)</button><button class="filter-tab-btn" data-sector="항공/여행">항공/여행 (1)</button><button class="filter-tab-btn" data-sector="매크로/지배구조">매크로/지배구조 (1)</button><button class="filter-tab-btn" data-sector="플랫폼/IT">플랫폼/IT (1)</button><button class="filter-tab-btn" data-sector="반도체/AI">반도체/AI (1)</button><button class="filter-tab-btn" data-sector="건설/모듈러">건설/모듈러 (1)</button><button class="filter-tab-btn" data-sector="보안/IT">보안/IT (1)</button><button class="filter-tab-btn" data-sector="가상자산/블록체인">가상자산/블록체인 (1)</button><button class="filter-tab-btn" data-sector="AI, 반도체, 하드웨어">AI, 반도체, 하드웨어 (1)</button><button class="filter-tab-btn" data-sector="OTT, 콘텐츠, 미디어">OTT, 콘텐츠, 미디어 (1)</button><button class="filter-tab-btn" data-sector="유통, 소비재">유통, 소비재 (1)</button><button class="filter-tab-btn" data-sector="부동산/정책">부동산/정책 (1)</button><button class="filter-tab-btn" data-sector="엔터테인먼트">엔터테인먼트 (1)</button><button class="filter-tab-btn" data-sector="유통, AI, 소비재">유통, AI, 소비재 (1)</button><button class="filter-tab-btn" data-sector="보험, 소비재">보험, 소비재 (1)</button><button class="filter-tab-btn" data-sector="식품/건강기능식품">식품/건강기능식품 (1)</button><button class="filter-tab-btn" data-sector="건설, 교통">건설, 교통 (1)</button><button class="filter-tab-btn" data-sector="조선">조선 (1)</button><button class="filter-tab-btn" data-sector="식품, 주주환원">식품, 주주환원 (1)</button><button class="filter-tab-btn" data-sector="건설, 인프라">건설, 인프라 (1)</button><button class="filter-tab-btn" data-sector="가전/렌탈">가전/렌탈 (1)</button><button class="filter-tab-btn" data-sector="AI, 금융보안">AI, 금융보안 (1)</button><button class="filter-tab-btn" data-sector="식품, 수출">식품, 수출 (1)</button><button class="filter-tab-btn" data-sector="IT, 매크로">IT, 매크로 (1)</button><button class="filter-tab-btn" data-sector="바이오/제약">바이오/제약 (1)</button><button class="filter-tab-btn" data-sector="금융/부동산">금융/부동산 (1)</button><button class="filter-tab-btn" data-sector="보안, 유통">보안, 유통 (1)</button>
+			</div>
+		</section>
+		<main class="news-grid" id="news-card-grid">
+<article class="news-card" data-sector="방산, 에너지, 매크로" data-importance="URGENT">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-urgent">URGENT</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 방산, 에너지, 매크로</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#1</div>
+	</div>
+	<h2 class="card-title">중동 지정학적 리스크 고조: 후티 반군의 사우디 주요 시설 타격</h2>
+	<ul class="summary-list">
+<li>후티 반군의 사우디 리야드 공항 및 송유관 타격으로 지정학적 리스크 급증</li><li>에너지 공급망 충격으로 인한 국제 유가 변동성 확대 예상</li><li>방산주 및 에너지 관련주에 대한 투자자 관심 집중 및 리스크 관리 필요</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 중동 분쟁 심화로 인한 에너지 공급 불안 및 글로벌 방산 수요 증가 기대
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 한화에어로스페이스</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> LIG넥스원</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 현대로템</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로, AI, 에너지" data-importance="URGENT">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-urgent">URGENT</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로, AI, 에너지</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#2</div>
+	</div>
+	<h2 class="card-title">S&amp;P 500/나스닥 하락 및 AI 버블 우려에 따른 안전자산 선호 현상</h2>
+	<ul class="summary-list">
+<li>S&amp;P 500 및 나스닥 100 지수, 호실적에도 불구하고 AI 버블 우려로 하락세</li><li>원유 가격 117달러 수준의 고유가 부담 지속</li><li>안전자산 선호 심리 강화로 배당주 ETF가 주요 지수 ETF 대비 강세</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> AI 과열에 대한 경계심과 고유가 부담이 기술주 및 지수 전반의 하방 압력으로 작용하며 자금의 안전자산 이동이 가속화됨
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> NVDA</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> MSFT</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> XOM</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> SCHD</span>	</div>
+</article>
+<article class="news-card" data-sector="에너지, 방산" data-importance="URGENT">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-urgent">URGENT</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 에너지, 방산</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#3</div>
+	</div>
+	<h2 class="card-title">중동 지정학적 리스크 고조 및 에너지 공급망 위협</h2>
+	<ul class="summary-list">
+<li>후티 반군의 사우디 리야드 공항 및 송유관 타격으로 인한 에너지 공급망 위협</li><li>국제 유가 변동성 확대 및 지정학적 리스크 프리미엄 반영</li><li>에너지 관련주 및 방산 섹터의 변동성 확대 대비 필요</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 중동 분쟁 확산에 따른 유가 상승 압력과 글로벌 안보 위기 상황이 방산 수요를 자극함.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> S-Oil</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> SK이노베이션</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 한화에어로스페이스</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> LIG넥스원</span>	</div>
+</article>
+<article class="news-card" data-sector="반도체" data-importance="URGENT">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-urgent">URGENT</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 반도체</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#4</div>
+	</div>
+	<h2 class="card-title">SK하이닉스 고점 대비 56% 급락 및 솔리다임 상장 중단 이슈</h2>
+	<ul class="summary-list">
+<li>SK하이닉스 주가 고점 대비 56% 급락으로 인한 투자 심리 위축</li><li>솔리다임 상장 중단 이슈 및 자금 조달 숙제에 따른 불확실성 증대</li><li>이번 주 예정된 실적 발표가 향후 주가 반등 여부를 결정할 핵심 변수</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 국내 반도체 대장주의 주가 변동 및 자회사 관련 불확실성은 국내 증시 및 반도체 섹터 전체 수급에 결정적 영향 미침
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> SK하이닉스</span>	</div>
+</article>
+<article class="news-card" data-sector="방산, 보안" data-importance="URGENT">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-urgent">URGENT</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 방산, 보안</span>
+			<span class="impact-badge impact-bull">하락/리스크 및 상승/수혜 혼재</span>
+		</div>
+		<div class="card-index">#5</div>
+	</div>
+	<h2 class="card-title">K-방산 업계 중국발 보안 리스크 경계령 및 보안 강화 요구</h2>
+	<ul class="summary-list">
+<li>중국발 보안 리스크로 인한 방산 관련 방문 시 휴대폰 사용 제한 및 임대폰 권고</li><li>수출 및 프로젝트 진행 과정에서의 보안 강화 필요성 및 지정학적 리스크 부각</li><li>보안 강화 움직임에 따른 보안 기술 관련 기업들의 신규 기회 창출 가능성</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 방산 수출 환경의 보안 변수 발생에 따른 리스크 관리 중요성 증대 및 보안 솔루션 수요 확대
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 한화에어로스페이스</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> LIG넥스원</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> S-1</span>	</div>
+</article>
+<article class="news-card" data-sector="AI, 로봇, 바이오" data-importance="URGENT">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-urgent">URGENT</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> AI, 로봇, 바이오</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#6</div>
+	</div>
+	<h2 class="card-title">뇌파 및 감정 인식 AI 기술 고도화 및 로봇 상용화 가속</h2>
+	<ul class="summary-list">
+<li>뇌파를 통한 &#039;속마음 읽는 AI&#039; 기술의 상용화 단계 진입</li><li>표정 기반 &#039;감정 읽는 AI&#039; 개발로 인간-로봇 상호작용 기술 혁신</li><li>AI와 바이오 기술의 융합을 통한 미래 산업 핵심 동력 확보</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 뇌파 및 감정 인식 기술은 차세대 AI 로봇 시장의 핵심 경쟁력으로, 관련 기술 보유 기업의 가치 재평가 기대.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 레인보우로보틱스</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 두산로보틱스</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 루닛</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로, AI, 반도체" data-importance="URGENT">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-urgent">URGENT</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로, AI, 반도체</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#7</div>
+	</div>
+	<h2 class="card-title">FOMC 회의 및 물가 지표 발표, AI 기업 실적 발표에 따른 시장 변동성 확대</h2>
+	<ul class="summary-list">
+<li>미국 FOMC 회의 및 물가 지표 발표 예정</li><li>글로벌 AI 기업들의 실적 발표 집중</li><li>삼성전자 등 주요 반도체 기업 실적 및 코스피 방향성 주목</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 금리 정책과 AI 산업의 실적이 겹치는 시점으로, 글로벌 증시의 방향성을 결정할 핵심 변수임.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성전자</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> SK하이닉스</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 엔비디아</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로, 외환" data-importance="URGENT">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-urgent">URGENT</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로, 외환</span>
+			<span class="impact-badge impact-neutral">중립</span>
+		</div>
+		<div class="card-index">#8</div>
+	</div>
+	<h2 class="card-title">달러-원 환율 하락세 및 FOMC 회의 앞둔 시장 긴장감</h2>
+	<ul class="summary-list">
+<li>달러-원 환율 1320원대 하락세 지속 및 이번 주 FOMC 회의 주목</li><li>뉴욕 증시 FOMC, 물가, AI 실적이라는 3대 시험대 직면</li><li>환율 향방과 주요 경제 지표가 시장 전반의 방향성 결정할 핵심 변수</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 환율 변동과 금리 결정은 국내 증시 수급 및 외인 자금 유입에 직접적인 영향을 미치는 가장 핵심적인 거시 경제 변수임.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 은행주</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성전자</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> SK하이닉스</span>	</div>
+</article>
+<article class="news-card" data-sector="반도체/모바일" data-importance="URGENT">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-urgent">URGENT</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 반도체/모바일</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#9</div>
+	</div>
+	<h2 class="card-title">삼성 엑시노스 2700, 퀄컴 최신 칩 성능 추월 및 2나노 공정 경쟁력 확보</h2>
+	<ul class="summary-list">
+<li>삼성 엑시노스 2700이 퀄컴 최신 칩의 성능 시험을 상회하는 결과 도출</li><li>2나노 공정에서의 기술적 우위 입증 및 갤럭시 S27 탑재 가능성 부각</li><li>모바일 AP 경쟁력 회복에 따른 시장 점유율 확대 기대</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 삼성의 모바일 AP 기술력 회복은 파운드리 및 메모리 반도체 생태계 전반에 강력한 긍정적 모멘텀으로 작용함.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성전자</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> SK하이닉스</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 한미반도체</span>	</div>
+</article>
+<article class="news-card" data-sector="로봇, 조선, 건설기계" data-importance="URGENT">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-urgent">URGENT</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 로봇, 조선, 건설기계</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#10</div>
+	</div>
+	<h2 class="card-title">HD현대로보틱스 AI 용접 기술 기반 미국 시장 공략 및 대형주 변동성 확대</h2>
+	<ul class="summary-list">
+<li>HD현대로보틱스 AI 용접 기술을 통한 미국 조선소 공략 가속화</li><li>무인 건설기계 기술 고도화를 통한 미래 산업 선점 가시성 확보</li><li>코스피 폭락에 따른 SK, HD현대 등 대형주 직격탄 및 시장 변동성 주의</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 기술 기반의 해외 시장 진출 가시성과 대형주 중심의 시장 변동성이 공존하는 상황으로 로봇/건설기계 모멘텀 분석 필수.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> HD현대중공업</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> HD현대로보틱스</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> HD현대건설기계</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로, 대형주" data-importance="URGENT">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-urgent">URGENT</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로, 대형주</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#11</div>
+	</div>
+	<h2 class="card-title">국내 10대 그룹 시가총액 급감 및 대형주 조정세 심화</h2>
+	<ul class="summary-list">
+<li>10대 그룹 시가총액 약 1,100조 원 증발하는 거시적 조정세 발생</li><li>삼성전자(-24%), SK(-30%) 등 주요 대형주 주가 급락</li><li>대형주 실적 및 펀더멘털에 대한 면밀한 점검 필요</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 국내 대표 대형주들의 급격한 시총 감소는 시장 전체의 투자 심리 위축 및 거시적 조정 국면을 시사함.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성전자</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> SK하이닉스</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> SK이노베이션</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로/반도체/대형주" data-importance="URGENT">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-urgent">URGENT</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로/반도체/대형주</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#12</div>
+	</div>
+	<h2 class="card-title">대기업 시가총액 1,100조 원 증발 및 주요 그룹 급락</h2>
+	<ul class="summary-list">
+<li>한 달 만에 대기업 시가총액 1,100조 원 증발</li><li>SK 30%, 삼성 24% 급감 등 대형주 중심의 자금 이탈 가속화</li><li>SK하이닉스 등 주요 기업의 자금 조달 리스크 및 재무 건전성 우려 부각</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 대형주 중심의 급격한 시총 증발과 거시적 조정 국면 진입으로 인한 시장 변동성 극대화
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성전자</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> SK하이닉스</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> SK이노베이션</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로/시장전반" data-importance="URGENT">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-urgent">URGENT</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로/시장전반</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#13</div>
+	</div>
+	<h2 class="card-title">10대 그룹 시총 1,100조 증발 및 SK 30% 급락 등 시장 변동성 확대</h2>
+	<ul class="summary-list">
+<li>어제 급락장에서 10대 그룹 시가총액 1,100조 원 증발</li><li>SK 그룹 주가 30% 급락 등 극심한 변동성 발생</li><li>기업 가치 및 리더십 변화에 따른 종목 선별 전략 필요</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 대형 그룹의 급락은 시장 전체의 투자 심리 위축 및 리스크 회피 성향을 강화하는 결정적 요인임
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> SK</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성전자</span>	</div>
+</article>
+<article class="news-card" data-sector="반도체, 매크로" data-importance="URGENT">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-urgent">URGENT</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 반도체, 매크로</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#14</div>
+	</div>
+	<h2 class="card-title">한국 경상수지, 독일·일본 합산 추월... 반도체 수출 견인</h2>
+	<ul class="summary-list">
+<li>한국 경상수지가 제조업 강국인 독일과 일본의 합계를 사상 처음으로 추월</li><li>반도체 수출이 한국 경제 성장의 핵심 동력으로 작용</li><li>수출 주도형 성장의 가시화로 반도체 및 관련 산업 섹터에 대한 투자 관심 집중</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 반도체 수출 경쟁력 확인을 통한 국내 수출 주도형 성장의 강력한 모멘텀 확인
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성전자</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> SK하이닉스</span>	</div>
+</article>
+<article class="news-card" data-sector="방산/에너지" data-importance="URGENT">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-urgent">URGENT</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 방산/에너지</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#15</div>
+	</div>
+	<h2 class="card-title">중동 지정학적 긴장 고조 및 이란 공습 위협에 따른 방산/에너지 변동성</h2>
+	<ul class="summary-list">
+<li>트럼프의 이란 공습 재개 위협 및 이란의 보복 준비 태세 고조</li><li>중동 지역의 지정학적 불확실성으로 인한 에너지 가격 변동성 확대</li><li>국제 정세 불안에 따른 방산 섹터의 단기적 수급 집중 가능성</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 지정학적 리스크 증대에 따른 방산 수요 증가 및 에너지 공급망 불안에 따른 변동성 확대
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 한화에어로스페이스</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> LIG넥스원</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 현대로템</span>	</div>
+</article>
+<article class="news-card" data-sector="반도체/매크로" data-importance="URGENT">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-urgent">URGENT</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 반도체/매크로</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#16</div>
+	</div>
+	<h2 class="card-title">메모리 가격 급등에 따른 글로벌 PC 출하량 21% 급감</h2>
+	<ul class="summary-list">
+<li>메모리 가격 상승으로 인한 소비자 구매 심리 위축 및 PC 교체 수요 지연</li><li>글로벌 PC 출하량 21% 급감으로 인한 시장 부담 가중</li><li>애플은 상대적으로 낮은 감소 폭을 기록하며 차별화 양상</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 메모리 가격 상승이 수요 위축으로 이어지는 역설적 상황은 단기적인 반도체 수요 둔화 리스크를 시사.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성전자</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> SK하이닉스</span>	</div>
+</article>
+<article class="news-card" data-sector="방산/드론" data-importance="URGENT">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-urgent">URGENT</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 방산/드론</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#17</div>
+	</div>
+	<h2 class="card-title">방사청, LIG D&amp;A &#039;소형무인기 대응사업&#039; 방산업체 지정 취소 검토</h2>
+	<ul class="summary-list">
+<li>방사청, LIG D&amp;A 소형무인기 대응사업 방산업체 지정 취소 검토</li><li>드론 관련 사업의 불확실성 증대로 인한 관련 기업 타격 우려</li><li>방산 섹터 내 사업 리스크가 높은 종목에 대한 신중한 접근 필요</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 정부 사업 지정 취소 검토는 해당 기업 및 관련 드론 산업의 수주 불확실성을 높이는 직접적인 리스크 요인.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> LIG넥스원</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 한국항공우주</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로/금융" data-importance="URGENT">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-urgent">URGENT</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로/금융</span>
+			<span class="impact-badge impact-neutral">중립</span>
+		</div>
+		<div class="card-index">#18</div>
+	</div>
+	<h2 class="card-title">한국은행, KOFR 거래 목표 25% 상향 및 지표금리 개편 가속화</h2>
+	<ul class="summary-list">
+<li>한국은행, KOFR 거래 목표를 25%로 상향 조정</li><li>산은·기은, KOFR 기반 대출 상품 1조 원 규모 신규 출시</li><li>금융시장 전반의 금리 체계 변화 및 대출 상품 동향 변화 예고</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 지표금리 체계 변화는 금융권 대출 구조 및 금리 민감도가 높은 섹터의 수익 구조와 자금 조달 비용에 직접적 영향을 미침.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> KB금융</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 신한지주</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 하나금융지주</span>	</div>
+</article>
+<article class="news-card" data-sector="IT/스마트폰" data-importance="URGENT">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-urgent">URGENT</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> IT/스마트폰</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#19</div>
+	</div>
+	<h2 class="card-title">애플 &#039;아이폰 듀오&#039; 출시 직후 내구성 및 품질 논란 발생</h2>
+	<ul class="summary-list">
+<li>아이폰 듀오 화면 파손 및 힌지 내구성 문제 해외 보고</li><li>신제품 품질 이슈로 인한 브랜드 이미지 및 소비자 신뢰 타격</li><li>하드웨어 결함에 따른 단기 주가 변동성 및 실망감 확산</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 신제품의 치명적 품질 결함은 브랜드 가치 하락과 직결되며 단기적인 판매량 및 주가에 부정적 영향을 미침
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 애플(AAPL)</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로, 금융" data-importance="URGENT">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-urgent">URGENT</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로, 금융</span>
+			<span class="impact-badge impact-neutral">중립</span>
+		</div>
+		<div class="card-index">#20</div>
+	</div>
+	<h2 class="card-title">IRS 시장 내 KOFR 거래 비중 목표 상향 및 코리보(Koribor) 중단 예고</h2>
+	<ul class="summary-list">
+<li>금융당국, IRS 시장 내 KOFR 거래 비중 목표를 25%로 상향 조정</li><li>한국은행의 지표금리 개편 속도 가속화 의지 반영</li><li>내년 4월 코리보(Koribor) 중단 예정에 따른 시장 변화 대비 필요</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 지표금리 체계 변화는 금융권 자금 조달 비용 및 금리 민감주에 직접적인 영향을 미치는 거시경제적 변화임.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> KB금융</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 신한지주</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 하나금융지주</span>	</div>
+</article>
+<article class="news-card" data-sector="자동차/매크로" data-importance="URGENT">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-urgent">URGENT</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 자동차/매크로</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#21</div>
+	</div>
+	<h2 class="card-title">트럼프, 관세 정책 기반 아우디 미국 5.6조 원 대규모 투자 발표</h2>
+	<ul class="summary-list">
+<li>아우디, 미국 조지아에 5조 6천억 원 규모의 공장 신설 계획 발표</li><li>트럼프, 관세 정책이 대규모 제조업 투자를 가능케 한 핵심 동력으로 언급</li><li>미국 내 생산 거점 확보 및 보호무역 기조에 따른 글로벌 공급망 재편 가속화</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 보호무역 정책과 연계된 대규모 제조 투자 신호는 글로벌 자동차 공급망 재편 및 관련 산업 수혜 기대감 증폭
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 현대차</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 기아</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 자동차 부품주</span>	</div>
+</article>
+<article class="news-card" data-sector="반도체" data-importance="URGENT">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-urgent">URGENT</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 반도체</span>
+			<span class="impact-badge impact-neutral">중립</span>
+		</div>
+		<div class="card-index">#22</div>
+	</div>
+	<h2 class="card-title">솔리다임 IPO 중단 및 SK하이닉스 낸드 투자 지속</h2>
+	<ul class="summary-list">
+<li>솔리다임 IPO 중단으로 인한 자금 조달 및 주주 보호 이슈 발생</li><li>SK하이닉스, IPO 중단에도 불구하고 낸드 투자 지속 의지 표명</li><li>미국 신규 공장 투자 재원 마련을 위한 자금 조달 다변화 전략 모색</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 낸드 시장 경쟁력 유지를 위한 투자 지속과 IPO 중단에 따른 자금 조달 불확실성 공존
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> SK하이닉스</span>	</div>
+</article>
+<article class="news-card" data-sector="반도체, IT, 매크로" data-importance="URGENT">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-urgent">URGENT</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 반도체, IT, 매크로</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#23</div>
+	</div>
+	<h2 class="card-title">삼성전자 및 미국 빅테크 실적 발표에 따른 증시 반등 변수</h2>
+	<ul class="summary-list">
+<li>삼성전자 실적 발표가 이번 주 코스피 반등의 핵심 변수로 부각</li><li>미국 빅테크 기업들의 실적과 FOMC 결과에 따른 시장 방향성 주목</li><li>기업 실적 기반의 증시 흐름 가늠을 위한 핵심 지표</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 삼성전자의 실적은 국내 증시 전체의 방향성을 결정하는 가장 강력한 모멘텀임.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성전자</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> SK하이닉스</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 애플</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 엔비디아</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로/반도체" data-importance="URGENT">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-urgent">URGENT</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로/반도체</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#24</div>
+	</div>
+	<h2 class="card-title">골드만삭스, AI 투자 우려로 코스피 목표치 25% 하향 조정</h2>
+	<ul class="summary-list">
+<li>골드만삭스, AI 투자 관련 불확실성으로 코스피 목표치 25% 하향</li><li>반도체 산업단지 조성 시 인프라 및 규제 난관 상존</li><li>대형 기술주 중심의 코스피 지수 변동성 확대</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 글로벌 IB의 목표치 하향은 외국인 수급에 부정적 영향을 미치며 코스피 전체의 하방 압력으로 작용.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성전자</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> SK하이닉스</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로, 에너지, 방산" data-importance="URGENT">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-urgent">URGENT</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로, 에너지, 방산</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#25</div>
+	</div>
+	<h2 class="card-title">중동 전쟁 재점화 및 유가 117달러 돌파에 따른 지정학적 리스크 고조</h2>
+	<ul class="summary-list">
+<li>트럼프의 이란 공습 가능성 언급으로 중동 지역 긴장감 최고조</li><li>지정학적 리스크 현실화로 유가 117달러 돌파</li><li>에너지 및 방산 섹터의 단기 변동성 확대 예상</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 지정학적 위기로 인한 에너지 가격 급등 및 글로벌 방산 수요 증가 모멘텀 발생
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 한화에어로스페이스</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> S-Oil</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 현대로템</span>	</div>
+</article>
+<article class="news-card" data-sector="에너지, 원자재" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 에너지, 원자재</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#26</div>
+	</div>
+	<h2 class="card-title">원유 가격 상승에 따른 주요 에너지 기업 사상 최고치 경신</h2>
+	<ul class="summary-list">
+<li>원유 랠리로 셰브론, 엑슨 모빌, 쉘 등 주요 에너지 기업 주가 사상 최고치 기록</li><li>에너지 섹터 전반에 강력한 상승 모멘텀 형성</li><li>향후 발표될 기업 실적에 따른 변동성 확대 및 포트폴리오 점검 필요</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 원유 가격 상승에 따른 에너지 기업의 수익성 개선 기대감 및 섹터 모멘텀 강화
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 셰브론</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 엑슨 모빌</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 쉘</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 코노코필립스</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로, 금융" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로, 금융</span>
+			<span class="impact-badge impact-bear">중립/리스크</span>
+		</div>
+		<div class="card-index">#27</div>
+	</div>
+	<h2 class="card-title">예보료율 인상 논의 및 연준 금리 정책 방향성 주목</h2>
+	<ul class="summary-list">
+<li>예보료율 인상안 논의로 관련 산업의 비용 구조 및 수익성 변화 예상</li><li>연준 금리 동결 가능성 속 12월 추가 인상 전망 우세</li><li>금리 방향성에 따른 시장 투자 심리 및 변동성 확대 대비 필요</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 금리 정책 및 예보료율 변화에 따른 금융권 수익성 및 시장 유동성 변화 모니터링 필요
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> KB금융</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 신한지주</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 하나금융지주</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로, 채권, 성장주" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로, 채권, 성장주</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#28</div>
+	</div>
+	<h2 class="card-title">프랑스 국채금리 24년 만의 최고치 기록 및 시장 변동성</h2>
+	<ul class="summary-list">
+<li>프랑스 국채금리 급등으로 인한 유럽 증시 및 성장률 변동성 확대</li><li>금리 급등에 따른 투자 심리 위축 및 자금 흐름 부담</li><li>금리 민감도가 높은 섹터의 리스크 관리 및 신중한 접근 필요</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 유럽발 고금리 기조 강화는 글로벌 자본 비용 상승을 초래하여 성장주 밸류에이션에 압박을 가함.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 유럽 상장 성장주</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 금리 민감주</span>	</div>
+</article>
+<article class="news-card" data-sector="바이오, 헬스케어" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 바이오, 헬스케어</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#29</div>
+	</div>
+	<h2 class="card-title">한국형 비만 치료제 &#039;에페&#039; 출시 및 비만 치료제 시장 경쟁 가속</h2>
+	<ul class="summary-list">
+<li>한국판 위고비로 불리는 비만 치료제 &#039;에페&#039; 시장 출격</li><li>장 건강 및 비만 치료제 중심의 웰니스 산업 트렌드 강화</li><li>비만 치료제 시장 내 경쟁 심화 및 신약 개발 모멘텀 형성</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 비만 치료제 시장의 폭발적 성장에 따른 국내 제약사의 신약 모멘텀 및 시장 점유율 확대 기대.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 유한양행</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 한미약품</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 대웅제약</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로, 반도체, 자동차" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로, 반도체, 자동차</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#30</div>
+	</div>
+	<h2 class="card-title">한국 경상수지 사상 첫 흑자 기록 및 수출 경쟁력 입증</h2>
+	<ul class="summary-list">
+<li>한국 경상수지 사상 최대 규모 흑자 달성 (독일·일본 합산 규모 상회)</li><li>글로벌 경제 환경 내 한국의 독보적 수출 경쟁력 확인</li><li>수출 주도형 기업들의 실질적 이익 개선 및 긍정적 모멘텀 형성</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 거시경제 지표의 획기적 개선은 수출 주도 산업의 펀더멘털 강화와 투자 심리 개선의 강력한 신호임.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성전자</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> SK하이닉스</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 현대차</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 기아</span>	</div>
+</article>
+<article class="news-card" data-sector="보안, IT 인프라, 금융" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 보안, IT 인프라, 금융</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#31</div>
+	</div>
+	<h2 class="card-title">은행권 보안 투자 경쟁 가속화 및 사이버 위협 대응 비상</h2>
+	<ul class="summary-list">
+<li>은행권 내 보안 투자 경쟁 심화로 기관별 약 1,000억 규모의 예산 투입</li><li>PHP 대응 등 사이버 위협에 대한 비상 체제 구축 및 디지털 리스크 관리 강화</li><li>금융 인프라 보안 수준 상향 평준화에 따른 보안 솔루션 수요 급증</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 금융권의 대규모 보안 예산 투입은 보안 솔루션 및 IT 인프라 기업들의 실적 개선으로 직결되는 강력한 모멘텀임.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 안랩</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 파수</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 샌즈랩</span>	</div>
+</article>
+<article class="news-card" data-sector="금융/은행" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 금융/은행</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#32</div>
+	</div>
+	<h2 class="card-title">5대 은행 가계대출 및 예금 동시 증가에 따른 유동성 변화</h2>
+	<ul class="summary-list">
+<li>5대 은행 가계대출이 한 달간 2조 6천억 원 증가</li><li>은행 예금 또한 11조 원 증가하며 시중 유동성 활발</li><li>금리 환경과 맞물린 금융 수요 및 소비 심리 변화 주시 필요</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 대출 및 예금의 동시 증가는 금융권 자금 흐름의 활성화를 의미하며 은행권 수익성 및 유동성 지표에 긍정적 신호.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> KB금융</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 신한지주</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 하나금융지주</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로/건설/내수" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로/건설/내수</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#33</div>
+	</div>
+	<h2 class="card-title">단기 일자리 31년 만에 최저치 기록 및 경기 둔화 신호</h2>
+	<ul class="summary-list">
+<li>단기 일자리가 1995년 이후 최저치를 기록하며 경기 둔화 시사</li><li>건설 및 내수 부진이 주요 원인으로 지목되어 4050 세대 타격</li><li>내수 소비 심리 위축 및 건설 업황 개선 여부가 핵심 변수</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 고용 지표 악화와 건설 업황 부진은 내수 소비 위축 및 건설 섹터의 실적 하락 압력으로 작용할 가능성이 높음.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 현대건설</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> GS건설</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성물산</span>	</div>
+</article>
+<article class="news-card" data-sector="방산" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 방산</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#34</div>
+	</div>
+	<h2 class="card-title">LIG D&amp;A 입찰 제한 및 방산업계 규제 리스크 부각</h2>
+	<ul class="summary-list">
+<li>LIG D&amp;A 기소에 따른 입찰 제한 조치 발생</li><li>방사청의 추가 제재 및 방산업체 지정 취소 검토 중</li><li>전 법무실장 관련 법적 분쟁 및 내부 심의 진행</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 방산 주요 기업의 입찰 제한 및 지정 취소 검토는 수주 경쟁력에 직접적인 타격을 줄 수 있는 중대한 규제 리스크임
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> LIG넥스원</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 한화에어로스페이스</span>	</div>
+</article>
+<article class="news-card" data-sector="바이오" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 바이오</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#35</div>
+	</div>
+	<h2 class="card-title">인비보(InVivo) CAR-T 치료제 자가면역질환 확장 및 빅파마 베팅</h2>
+	<ul class="summary-list">
+<li>빅파마 시장의 CAR-T 치료제에 대한 집중 투자 확인</li><li>암 치료를 넘어 자가면역질환 분야로의 영역 확장</li><li>바이오 섹터 전반의 새로운 성장 동력 확보 가능성</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> CAR-T 기술의 자가면역질환 확장은 바이오 산업의 파이프라인 가치를 재평가하게 만드는 핵심 모멘텀임
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 인비보(InVivo)</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성바이오로직스</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 셀트리온</span>	</div>
+</article>
+<article class="news-card" data-sector="재생에너지, 인프라" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 재생에너지, 인프라</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#36</div>
+	</div>
+	<h2 class="card-title">공공기관 재생에너지 발전 목표 설정 및 부지 제공 의무화 추진</h2>
+	<ul class="summary-list">
+<li>공공기관 대상 재생에너지 발전 목표 설정 및 부지 제공 의무화 정책 도입</li><li>지방공기업까지 목표제 도입 검토 확대로 정책 파급력 증대</li><li>정부의 재생에너지 인프라 구축에 대한 강력한 정책적 동력 확보</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 정부 주도의 재생에너지 인프라 확충 정책으로 인한 장기적 수혜 및 관련 기업의 수주 모멘텀 강화
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 한화솔루션</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 씨에스윈드</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> LS Electric</span>	</div>
+</article>
+<article class="news-card" data-sector="자동차" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 자동차</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#37</div>
+	</div>
+	<h2 class="card-title">현대차·기아 중국 시장 점유율 급락 및 전동화 경쟁 심화</h2>
+	<ul class="summary-list">
+<li>중국 내 현대차·기아 월 판매량 1만 대 하회 및 점유율 0.6% 수준으로 하락</li><li>테슬라 및 BYD의 공세로 인한 시장 방어선 위기</li><li>전동화 신차 출시가 향후 점유율 회복의 핵심 변수로 부각</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 중국 내 경쟁 심화로 인한 실적 압박 및 전동화 전환 속도에 대한 시장의 우려 반영
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 현대차</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 기아</span>	</div>
+</article>
+<article class="news-card" data-sector="방산/매크로" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 방산/매크로</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#38</div>
+	</div>
+	<h2 class="card-title">김정은 중국 방문 및 북중 관계 강화에 따른 지정학적 리스크</h2>
+	<ul class="summary-list">
+<li>김정은 북한 지도자의 중국 방문 및 북중친선 강화 메시지 전달</li><li>동북아 지역의 지정학적 긴장감 고조 및 변동성 확대</li><li>국제 정세 변화에 따른 방산 섹터 수급 동향 주목 필요</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 북중 관계 강화에 따른 지정학적 리스크 증대로 방산 섹터의 수급 및 변동성 확대 예상
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 한화에어로스페이스</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> LIG넥스원</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 현대로템</span>	</div>
+</article>
+<article class="news-card" data-sector="방산" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 방산</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#39</div>
+	</div>
+	<h2 class="card-title">연합사 지휘구조 개편(4성→3성) 및 국방 안보 구조 변화</h2>
+	<ul class="summary-list">
+<li>전작권 전환 대비 연합사 지휘구조의 3성 장군 체제 전환 가능성 제기</li><li>국방 및 안보 분야의 구조적 변화 시사</li><li>정책 변화에 따른 방산 섹터 수혜 및 관련주 동향 주목</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 국방 구조 개편에 따른 정책적 모멘텀 및 방산 관련 수혜 기대감 반영
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 한화에어로스페이스</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> KAI</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 현대로템</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로, 정책" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로, 정책</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#40</div>
+	</div>
+	<h2 class="card-title">미국 중간선거 임박 및 트럼프 정책 변동성 확대 (관세, 투자 정책)</h2>
+	<ul class="summary-list">
+<li>미국 중간선거 일주일 전 정치적 불확실성 증대</li><li>트럼프의 관세 정책 및 투자 정책 변화 가능성</li><li>레드스테이트 중심의 정책 변화가 글로벌 시장에 미칠 영향</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 트럼프의 정책 기조는 관세 및 글로벌 공급망에 직접적인 영향을 미쳐 수출 중심 기업에 리스크 요인임.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 현대차</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 기아</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성전자</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로, 정책, 자동차, 에너지" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로, 정책, 자동차, 에너지</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#41</div>
+	</div>
+	<h2 class="card-title">미국 중간선거 앞둔 트럼프의 &#039;마이웨이&#039; 기조 및 관세 정책 불확실성</h2>
+	<ul class="summary-list">
+<li>미국 중간선거를 앞둔 트럼프의 정치적 행보와 &#039;마이웨이&#039; 기조 주목</li><li>관세 정책 및 북미회담 등 외교적 변수가 시장 불확실성 증대</li><li>정치적 변동성에 따른 수출 및 글로벌 공급망 관련주 민감도 상승</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 트럼프의 관세 정책 및 외교적 불확실성은 수출 중심 기업과 글로벌 공급망에 직접적인 리스크 요인으로 작용
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 현대차</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 기아</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 에너지 관련주</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#42</div>
+	</div>
+	<h2 class="card-title">미국 중간선거 임박 및 트럼프 &#039;마이웨이&#039; 기조에 따른 정책 불확실성</h2>
+	<ul class="summary-list">
+<li>미국 중간선거 일주일 전 트럼프의 정책 기조(관세, 북미회담 등)에 따른 시장 변동성 확대</li><li>비싼 기름값 및 관세 정책 변화가 글로벌 투자 환경에 미칠 영향 주목</li><li>정치적 불확실성에 따른 섹터별 리스크 관리 및 정책 변화 모니터링 필요</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 트럼프의 관세 정책 및 에너지 정책 변화는 글로벌 공급망과 국내 수출 기업들의 수익성에 직접적인 리스크 요인으로 작용.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 현대차</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 기아</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 에너지 관련주</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로, 에너지" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로, 에너지</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#43</div>
+	</div>
+	<h2 class="card-title">에너지 시장 상시 수급 불안 및 공급망 &#039;회복력&#039; 확보 중요성 증대</h2>
+	<ul class="summary-list">
+<li>석유 및 가스 시장에서 지속적인 수급 불안정성 감지</li><li>단순 저비용 확보를 넘어 공급망의 &#039;회복력(Resilience)&#039; 확보가 핵심 과제로 부상</li><li>에너지 안보 및 공급망 안정성이 기업 실적과 시장 변동성을 좌우할 핵심 동인으로 작용</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 에너지 안보 강화 정책 및 공급망 재편에 따른 에너지 인프라 및 관련 기업의 중요도 상승
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 한국전력</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> SK이노베이션</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> S-Oil</span>	</div>
+</article>
+<article class="news-card" data-sector="게임, AI" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 게임, AI</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#44</div>
+	</div>
+	<h2 class="card-title">게임 업계 생성형 AI 도입 가속화 및 AI 역량 중심의 산업 구조 재편</h2>
+	<ul class="summary-list">
+<li>국내 게임사의 77%가 생성형 AI를 실무에 적극 활용 중</li><li>게임 개발을 넘어 채용 단계까지 AI 역량을 최우선으로 평가하는 추세</li><li>AI 기술 내재화가 게임 산업의 핵심 경쟁력으로 자리 잡으며 기술력 기반 기업 주목</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> AI 기술 내재화가 게임 산업의 생산성 및 경쟁력을 결정짓는 핵심 요소로 부상하며 관련 기술 보유 기업의 가치 상승
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 크래프톤</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 엔씨소프트</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 펄어비스</span>	</div>
+</article>
+<article class="news-card" data-sector="보안/IT인프라" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 보안/IT인프라</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#45</div>
+	</div>
+	<h2 class="card-title">북한 IT 인력의 AI 활용 신분 위조 및 기업 보안 리스크 증대</h2>
+	<ul class="summary-list">
+<li>북한 IT 인력이 AI를 이용해 신분을 위조하고 한국 기업에 취업하는 사례 포착</li><li>첨단 기술을 악용한 인력 유출 및 내부 보안 시스템의 취약점 노출</li><li>기업들의 인력 검증 프로세스 및 보안 솔루션 강화 수요 급증 예상</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> AI 기반 신분 위조 기술 고도화에 따른 기업 보안 수요 급증으로 보안 솔루션 및 인증 시스템 관련주 수혜 기대.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 안랩</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 파수</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 샌즈랩</span>	</div>
+</article>
+<article class="news-card" data-sector="우주항공, 방산" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 우주항공, 방산</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#46</div>
+	</div>
+	<h2 class="card-title">민간 로켓 &#039;한빛-나노&#039; 책임보험 첫 고시 및 제도적 기반 마련</h2>
+	<ul class="summary-list">
+<li>민간 로켓 &#039;한빛-나노&#039; 최대 1800만 달러 규모 보험 책정</li><li>민간 우주 산업의 제도적 안전망 및 신뢰도 확보</li><li>우주항공 분야 기업들의 안정적인 사업 환경 제공</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 민간 우주 산업의 제도적 리스크 완화로 관련 기업들의 사업 확장성 및 투자 매력도 상승
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 한화에어로스페이스</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 한국항공우주</span>	</div>
+</article>
+<article class="news-card" data-sector="방산, 안보" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 방산, 안보</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#47</div>
+	</div>
+	<h2 class="card-title">남북 긴장 고조에 따른 지정학적 리스크 확대 및 방산 섹터 변동성 증대</h2>
+	<ul class="summary-list">
+<li>남북 간 핵무기 개발 관련 설전 격화로 지정학적 긴장감 고조</li><li>국제적 이슈에 따른 국내 증시 변동성 확대 가능성</li><li>방산 및 안보 관련 섹터의 단기적 수급 변화 주목 필요</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 지정학적 리스크 증가는 방산 기업들의 수주 모멘텀 및 단기적 주가 상승의 주요 동인으로 작용함.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 한화에어로스페이스</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> LIG넥스원</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 현대로템</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로, 내수 소비재" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로, 내수 소비재</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#48</div>
+	</div>
+	<h2 class="card-title">고물가 및 소비쿠폰 기저효과로 인한 내수 회복 동력 약화</h2>
+	<ul class="summary-list">
+<li>고물가 압박과 소비쿠폰 기저효과가 겹치며 내수 회복세 둔화</li><li>소비 심리 위축에 따른 내수 관련 종목의 실적 변동성 확대</li><li>내수 소비재 섹터에 대한 보수적 접근 및 실적 모니터링 필요</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 고물가 지속과 소비 위축은 내수 소비재 기업의 매출 및 수익성 악화로 직결되는 매크로 리스크임.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 현대백화점</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 신세계</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 아모레퍼시픽</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로, 내수 소비" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로, 내수 소비</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#49</div>
+	</div>
+	<h2 class="card-title">내수 회복 불확실성 및 고물가 압박에 따른 소비 위축</h2>
+	<ul class="summary-list">
+<li>고물가 압박과 소비쿠폰 기저효과로 인한 내수 회복세 둔화</li><li>소비 심리 위축에 따른 내수 관련 업종의 실질 체력 검증 필요</li><li>거시 경제 리스크 관리에 따른 포트폴리오 신중 조정 필요</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 고물가와 소비 위축이 내수 소비재 기업의 실적 하방 압력으로 작용할 가능성 높음
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 현대백화점</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 신세계</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 이마트</span>	</div>
+</article>
+<article class="news-card" data-sector="AI, 소프트웨어" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> AI, 소프트웨어</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#50</div>
+	</div>
+	<h2 class="card-title">차세대 &#039;감정 읽는 AI&#039; 기술 개발 및 감성 컴퓨팅 트렌드 부상</h2>
+	<ul class="summary-list">
+<li>표정 인식을 통한 감정 분석 기술의 진보</li><li>사용자 경험 혁신을 통한 차세대 AI 시장 개척</li><li>감성 컴퓨팅 트렌드에 따른 소프트웨어 기업 기술력 주목</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 감성 컴퓨팅 기술은 AI 서비스 고도화의 핵심 동력으로 기술 선점 기업의 가치 재평가 기대
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> NAVER</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 카카오</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 솔트룩스</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로, AI, 기술주" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로, AI, 기술주</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#51</div>
+	</div>
+	<h2 class="card-title">월가 큰손들의 기술주 매수세 유지 및 AI 성장 동력 확신</h2>
+	<ul class="summary-list">
+<li>일부 매도 의견에도 불구하고 월가 기관들은 기술주 매수 포지션 유지</li><li>단기적 시장 잡음보다 근본적인 기술 성장 동력에 대한 강한 확신 확인</li><li>기술 섹터 내 실질적 모멘텀을 가진 종목 선별 전략 유효</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 기관 투자자의 강력한 매수세는 기술주 섹터의 하방 경직성을 확보하고 장기적 상승 모멘텀을 지지하는 핵심 지표임.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성전자</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> SK하이닉스</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 엔비디아</span>	</div>
+</article>
+<article class="news-card" data-sector="방산, 통신, 우주항공" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 방산, 통신, 우주항공</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#52</div>
+	</div>
+	<h2 class="card-title">스타링크 안보 리스크 부각 및 독자적 위성망 구축 가속화</h2>
+	<ul class="summary-list">
+<li>미 정부의 스타링크 제어 가능성 및 머스크 관련 안보 거래 파장 확산</li><li>통신 인프라의 지정학적 중요성 극대화 및 우크라이나 속도 복구 이슈</li><li>미국 동맹국들의 독자적 위성망 구축 가속화로 인한 방산/통신 수요 증가</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 통신 인프라의 안보화 가속으로 인해 위성 통신 및 방산 기술을 보유한 기업들의 정책적 수혜 가능성 증대.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 한화에어로스페이스</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> LIG넥스원</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> KAI</span>	</div>
+</article>
+<article class="news-card" data-sector="반도체, 건설, 정책" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 반도체, 건설, 정책</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#53</div>
+	</div>
+	<h2 class="card-title">호남반도체 산업단지 조성 가속 및 규제 완화 추진</h2>
+	<ul class="summary-list">
+<li>그린벨트 예외 절차 정비 및 산단 인허가 패스트트랙 추진</li><li>R&amp;D 근로시간 특례 등 반도체 산업 육성을 위한 규제 해소 움직임</li><li>인프라 확충과 규제 완화가 맞물린 반도체 생태계 확장 기대</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 정부의 강력한 반도체 산업 육성 의지가 규제 완화와 인프라 확충으로 이어져 관련 생태계 수혜 기대.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성전자</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> SK하이닉스</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 한미반도체</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로, 반도체" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로, 반도체</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#54</div>
+	</div>
+	<h2 class="card-title">한국 경상수지 흑자 및 반도체 수출 주도 성장 가시화</h2>
+	<ul class="summary-list">
+<li>한국 경상수지가 독일/일본 합계 추월하며 사상 첫 흑자 기록</li><li>IMF의 한국 성장 전망 및 반도체 수출의 강력한 기여도 확인</li><li>수출 주도형 성장에 따른 반도체 및 수출 강점 기업 주목</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 강력한 반도체 수출이 국가 경제 성장을 견인하며 관련 업종의 실적 및 시장 지배력 강화 확인.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성전자</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> SK하이닉스</span>	</div>
+</article>
+<article class="news-card" data-sector="보안, IT" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 보안, IT</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#55</div>
+	</div>
+	<h2 class="card-title">안랩, 일본 산업보안 시장 공략 및 IT/OT 통합 보안 기술 강화</h2>
+	<ul class="summary-list">
+<li>안랩 일본 산업보안 시장 공략 가속화 및 IT/OT 통합 보안 기술 선보임</li><li>AI 해킹 시대에 따른 산업 현장 랜섬웨어 방어 중요성 증대</li><li>산업 보안 솔루션을 갖춘 기업에 대한 투자자 관심 집중 전망</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 글로벌 보안 수요 증가 및 일본 시장 진출을 통한 보안 솔루션 기업의 실적 확장성 기대
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 안랩</span>	</div>
+</article>
+<article class="news-card" data-sector="AI, 반도체" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> AI, 반도체</span>
+			<span class="impact-badge impact-neutral">중립</span>
+		</div>
+		<div class="card-index">#56</div>
+	</div>
+	<h2 class="card-title">미국 정부의 AI 안전성 규제 강화 및 정책 변수 부각</h2>
+	<ul class="summary-list">
+<li>백악관 및 미 의회, AI 기업에 기술 개발보다 제품 안전성 확보 최우선 주문</li><li>AI 속도 조절론 확산에 따른 규제 리스크 관리 및 안전 기준 준수 기업 주목 필요</li><li>2026년 미국 중간선거가 AI 산업 정책 및 기술 발전 방향의 핵심 변수로 부상</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> AI 산업의 장기적 성장 동력과 정부 규제 사이의 균형이 향후 기술 기업의 밸류에이션 핵심 변수로 작용
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> NVIDIA</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> Microsoft</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> Google</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> SK하이닉스</span>	</div>
+</article>
+<article class="news-card" data-sector="AI/보안/기술주" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> AI/보안/기술주</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#57</div>
+	</div>
+	<h2 class="card-title">AI 기반 보안 시스템 무력화 및 글로벌 서버 보안 위기</h2>
+	<ul class="summary-list">
+<li>AI가 인간 해커를 능가하는 보안 침투 능력 입증으로 기술적 충격 발생</li><li>전 세계 서버 보안 패러다임의 근본적인 전환 필요성 대두</li><li>보안 솔루션 및 AI 기술주들의 변동성 확대 및 재평가 가능성</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> AI 보안 취약성 이슈로 인한 보안 솔루션 수요 급증 및 관련 기술주 재평가 가능성
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 안랩</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 클라우드 보안 관련주</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> AI 보안 솔루션</span>	</div>
+</article>
+<article class="news-card" data-sector="건설기계/AI" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 건설기계/AI</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#58</div>
+	</div>
+	<h2 class="card-title">HD현대사이트솔루션, AI 무인 굴착기 플랫폼 국책과제 선정</h2>
+	<ul class="summary-list">
+<li>AI 무인 굴착기 플랫폼 개발 국책과제 선정</li><li>건설 산업의 스마트화 및 자동화 흐름 가속화</li><li>실제 상용화 단계 진입을 위한 기술적 동력 확보</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 국책과제 선정을 통한 기술 선점 및 건설 자동화 시장에서의 경쟁 우위 확보 모멘텀
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> HD현대사이트솔루션</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로/반도체/IT" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로/반도체/IT</span>
+			<span class="impact-badge impact-neutral">중립</span>
+		</div>
+		<div class="card-index">#59</div>
+	</div>
+	<h2 class="card-title">빅테크 불안에 따른 안전자산 선호 및 삼성전자 폴드8 모멘텀</h2>
+	<ul class="summary-list">
+<li>빅테크 불안감으로 인한 미국 국채 등 안전자산 이동</li><li>삼성전자 폴드8 출시 및 리센느 협업 예고</li><li>젊은 층 공략을 통한 재도약 기대감 형성</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 매크로적 자금 이탈과 개별 기업의 신제품 모멘텀이 공존하는 복합적 상황
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성전자</span>	</div>
+</article>
+<article class="news-card" data-sector="IT, 반도체" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> IT, 반도체</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#60</div>
+	</div>
+	<h2 class="card-title">삼성전자 8세대 폴더블 기술 장벽 및 재도약 기대감</h2>
+	<ul class="summary-list">
+<li>삼성의 8세대 폴더블 노하우가 애플의 기술 장벽으로 작용하고 있다는 분석</li><li>이재용 회장 취임 4년 차를 맞아 삼성전자의 재도약 기대감 고조</li><li>하드웨어 기술 패권 경쟁에서 삼성의 기술적 우위 부각</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 기술적 우위 확보와 경영 리더십 안정화에 따른 IT 부문 경쟁력 강화 기대
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성전자</span>	</div>
+</article>
+<article class="news-card" data-sector="바이오" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 바이오</span>
+			<span class="impact-badge impact-neutral">중립</span>
+		</div>
+		<div class="card-index">#61</div>
+	</div>
+	<h2 class="card-title">한미약품 비만치료제 모멘텀 및 경영권 분쟁 리스크 공존</h2>
+	<ul class="summary-list">
+<li>삼중 작용 비만약 후보 물질 &#039;잔트루타이드&#039; 명명으로 비만치료제 시장 기대감 상승</li><li>임종윤 회장의 특별감사 요구로 인한 경영권 분쟁 갈등 심화</li><li>혁신 신약 개발 성과와 내부 경영 리스크가 동시에 부각되는 복합적 상황</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 비만치료제 시장의 강력한 성장 모멘텀과 경영권 분쟁에 따른 불확실성이 공존
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 한미약품</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로, 규제" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로, 규제</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#62</div>
+	</div>
+	<h2 class="card-title">공정위, 조사 거부 시 과징금 대폭 강화 (매출액 1% 수준)</h2>
+	<ul class="summary-list">
+<li>공정위원장, 조사 거부 시 과징금을 전체 매출의 1% 수준으로 강화 발표</li><li>기업들의 규제 준수 의무 및 리스크 관리 중요성 증대</li><li>규제 산업 내 기업들의 컴플라이언스 대응이 핵심 투자 포인트로 부각</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 강력한 과징금 정책 도입으로 인한 대기업들의 규제 리스크 및 비용 부담 증가
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 대형주 전반</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로/에너지" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로/에너지</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#63</div>
+	</div>
+	<h2 class="card-title">트럼프의 에너지 정책 옹호 및 규제 완화 기조에 따른 매크로 영향</h2>
+	<ul class="summary-list">
+<li>트럼프의 에너지 정책 옹호 및 인플레이션 대응을 위한 예산 삭감 촉구</li><li>규제 완화 요구에 따른 에너지 및 규제 민감 산업의 수급 변화 예고</li><li>인플레이션 압력과 정책 변화에 따른 산업별 수급 동향 모니터링 필요</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 정책 기조 변화에 따른 규제 완화 수혜 섹터의 투자 심리 개선 및 에너지 가격 변동성 대응
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 에너지 관련주</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 화학 관련주</span>	</div>
+</article>
+<article class="news-card" data-sector="가전/IT" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 가전/IT</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#64</div>
+	</div>
+	<h2 class="card-title">LG전자, 유럽 B2B 가전 시장 공략 가속화 및 대용량 세탁가전 공급</h2>
+	<ul class="summary-list">
+<li>독일 쉴링에 대용량 세탁가전 공급을 통한 유럽 B2B 시장 공략</li><li>단순 납품을 넘어선 유럽 내 사업 영역 확장 및 기술력 입증</li><li>가전 부문 실적 개선 및 글로벌 시장 점유율 확대 기대감</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 유럽 B2B 시장 내 점유율 확대 및 가전 부문 실적 견인 모멘텀 확보
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> LG전자</span>	</div>
+</article>
+<article class="news-card" data-sector="규제/거버넌스" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 규제/거버넌스</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#65</div>
+	</div>
+	<h2 class="card-title">공정위, 조사 거부 기업 대상 과징금 상향(매출 1%) 및 규제 강화</h2>
+	<ul class="summary-list">
+<li>공정위, 조사 거부 시 과징금을 전체 매출의 1% 수준으로 강화 검토</li><li>기업의 내부 통제 및 투명성 확보 의무 강화 시그널</li><li>규제 리스크가 기업 가치 및 법적 리스크에 직결되는 변수 부각</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 규제 강화에 따른 기업의 법적 리스크 비용 증가 및 투명성 관리 부담 가중
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 공정거래 위반 리스크 기업</span>	</div>
+</article>
+<article class="news-card" data-sector="AI/매크로" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> AI/매크로</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#66</div>
+	</div>
+	<h2 class="card-title">머스크의 AI 생태계 베팅 및 개인 투자자 레버리지 수급 동향</h2>
+	<ul class="summary-list">
+<li>머스크의 AI 생태계 주도권 확보를 위한 대규모 베팅 및 투자 심리 자극</li><li>폭락장 속 개인 투자자의 단일 종목 레버리지 순매수세 유입</li><li>AI 기술 주도주에 대한 강력한 모멘텀과 시장 변동성 공존</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> AI 기술 주도주에 대한 강력한 모멘텀과 개인 투자자의 공격적 베팅으로 인한 변동성 확대
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 엔비디아</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 테슬라</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 레버리지 ETF</span>	</div>
+</article>
+<article class="news-card" data-sector="비철금속, 지배구조" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 비철금속, 지배구조</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#67</div>
+	</div>
+	<h2 class="card-title">고려아연 감사위원회의 최윤범 회장 자금 유용 의혹 검토</h2>
+	<ul class="summary-list">
+<li>감사위원회가 최윤범 회장의 자금 유용 의혹에 대한 검토 착수</li><li>영풍 및 MBK 측에 조사 검토 결과 회신 예정</li><li>지배구조 이슈 및 경영권 분쟁 관련 변동성 확대</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 경영권 분쟁 및 지배구조 리스크가 주가 변동성을 극대화하는 핵심 요소로 작용
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 고려아연</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 영풍</span>	</div>
+</article>
+<article class="news-card" data-sector="자동차, 모빌리티" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 자동차, 모빌리티</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#68</div>
+	</div>
+	<h2 class="card-title">현대차그룹 중국 시장 판매 8개월 연속 감소 및 점유율 하락</h2>
+	<ul class="summary-list">
+<li>현대차·기아 중국 판매량 1만 대 붕괴 및 점유율 1% 미만 하락</li><li>중국 시장 내 성장 정체 우려 및 실적 하방 압력 가중</li><li>전동화 신차 출시를 통한 시장 돌파구 마련이 핵심 과제</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 주요 수출 시장 중 하나인 중국에서의 점유율 하락은 향후 실적 전망에 부정적 영향
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 현대차</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 기아</span>	</div>
+</article>
+<article class="news-card" data-sector="물류/조선" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 물류/조선</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#69</div>
+	</div>
+	<h2 class="card-title">해양수산부, 2조원 규모 항만 및 연안정비사업 강력 추진</h2>
+	<ul class="summary-list">
+<li>2조원 규모 항만 및 연안정비사업 재정 집행 강력 추진</li><li>전국 16개 현장 점검을 통한 예산 집행 장애 요소 해소</li><li>국내 물류 인프라 확충을 통한 조선 및 물류 기업 수혜 기대</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 정부의 대규모 인프라 예산 집행은 물류 및 조선 관련 기업의 수주 및 사업 확장 기회로 작용.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> HMM</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 현대제영</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 동방</span>	</div>
+</article>
+<article class="news-card" data-sector="항공/여행" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 항공/여행</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#70</div>
+	</div>
+	<h2 class="card-title">한-중-일 항공 노선 대폭 증편 및 여행 수요 회복 기대</h2>
+	<ul class="summary-list">
+<li>일본 및 중국 노선 주당 546회 증편 및 신설</li><li>전년 대비 항공편 7.6% 증가로 여행 수요 회복 모멘텀 확보</li><li>항공주 실적 개선 기대감과 국제유가 변동성 사이의 균형 필요</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 노선 확대에 따른 운송량 증가가 항공사 실적 개선의 직접적인 동력으로 작용.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 대한항공</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 아시아나항공</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 제주항공</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로/지배구조" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로/지배구조</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#71</div>
+	</div>
+	<h2 class="card-title">삼성, CEO 승계 관리체계 확대 및 이사회 중심 경영 강화</h2>
+	<ul class="summary-list">
+<li>삼성, CEO 승계 후보군에 대한 이사회 정례 보고를 계열사까지 확대</li><li>삼성전기, SDI 등 주요 계열사 포함 경영 투명성 제고</li><li>그룹 차원의 안정적 경영 승계 및 지배구조 정비 신호</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 지배구조의 투명성 강화와 안정적인 승계 체계 구축은 장기적 투자 신뢰도를 높이고 경영 안정성을 확보하는 긍정적 요인임.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성전자</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성SDI</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성전기</span>	</div>
+</article>
+<article class="news-card" data-sector="반도체" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 반도체</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#72</div>
+	</div>
+	<h2 class="card-title">전기연구원, 탄화규소(SiC) 반도체 결함 신호 오류 규명</h2>
+	<ul class="summary-list">
+<li>15년간 잘못 알려진 탄화규소 반도체 불량 판별 기준 바로잡음</li><li>국내 연구진의 기술적 성과로 반도체 품질 관리 신뢰도 향상</li><li>관련 기술 보유 기업의 시장 경쟁력 및 기술적 가치 상승 기대</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 기술적 오류 정정은 차세대 전력반도체 시장에서 품질 표준 확립 및 기술적 우위 확보에 기여하여 관련 기업에 긍정적임.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> SK실트론</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> DB하이텍</span>	</div>
+</article>
+<article class="news-card" data-sector="자동차/2차전지" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 자동차/2차전지</span>
+			<span class="impact-badge impact-neutral">중립</span>
+		</div>
+		<div class="card-index">#73</div>
+	</div>
+	<h2 class="card-title">독일-일본 정상회담 및 유럽 전기차(EV) 정책 영향 분석</h2>
+	<ul class="summary-list">
+<li>일본 측의 유럽 EV 우대 정책 제외 방지 요구</li><li>글로벌 전기차 규제 환경 및 정책 방향성 변화 가능성</li><li>유럽 정책 변화에 따른 일본 및 글로벌 자동차 산업 영향 주목</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 글로벌 EV 정책은 공급망과 시장 점유율에 직접적인 영향을 미치는 핵심 규제 변수임
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 현대차</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 기아</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 테슬라</span>	</div>
+</article>
+<article class="news-card" data-sector="플랫폼/IT" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 플랫폼/IT</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#74</div>
+	</div>
+	<h2 class="card-title">유럽 청소년 SNS 규제 법제화 및 플랫폼 과징금 리스크</h2>
+	<ul class="summary-list">
+<li>유럽 내 청소년 SNS 사용 규제 법안 강화 움직임</li><li>규제 미이행 플랫폼 대상 최대 1000억 원 벌금 부과 가능</li><li>글로벌 플랫폼 기업의 규제 준수 비용 및 법적 리스크 증대</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 강력한 규제와 고액의 과징금은 플랫폼 기업의 수익성 및 운영 비용에 직접적인 리스크 요인
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 메타</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 알파벳</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 틱톡</span>	</div>
+</article>
+<article class="news-card" data-sector="반도체/AI" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 반도체/AI</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#75</div>
+	</div>
+	<h2 class="card-title">삼성전자 실리콘밸리 본사 확장 및 기술 리더십 강화</h2>
+	<ul class="summary-list">
+<li>실리콘밸리 본사 규모 2배 확장 및 대규모 투자 단행</li><li>이재용 취임 4년 차, 글로벌 기술 리더십 재도약 신호</li><li>글로벌 혁신을 위한 인프라 및 연구 역량 강화</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 대규모 시설 투자 및 본사 확장은 기술 리더십 강화 및 중장기 성장 동력 확보의 강력한 신호
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성전자</span>	</div>
+</article>
+<article class="news-card" data-sector="건설/모듈러" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 건설/모듈러</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#76</div>
+	</div>
+	<h2 class="card-title">모듈러 특별법 논의 지연에 따른 산업 모멘텀 위축</h2>
+	<ul class="summary-list">
+<li>핵심 동력인 &#039;모듈러 특별법&#039;이 10개월째 논의 지연 중</li><li>법안 통과 지연으로 인한 산업 전반의 투자 심리 위축 우려</li><li>공급망 개선 기대감 저하로 관련 산업주 주가 흐름의 불확실성 증대</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 정책적 지원 지연이 산업 성장 모멘텀을 저해하며 관련 섹터 투자 심리 악화 요인으로 작용
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 모듈러 관련 건설주</span>	</div>
+</article>
+<article class="news-card" data-sector="건설/부동산" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 건설/부동산</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#77</div>
+	</div>
+	<h2 class="card-title">용산공원 아파트 관련 입법 가속화 및 주택 공급 정책 강화</h2>
+	<ul class="summary-list">
+<li>여당 주도로 용산공원 아파트 관련 입법 속도 가속화</li><li>정부의 강력한 주택 공급 의지 및 규제 완화 기조가 시장에 반영</li><li>대규모 정비사업 추진에 따른 인프라 및 건설 섹터 수혜 전망</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 정부의 강력한 주택 공급 정책 및 대규모 정비사업 추진은 건설 및 인프라 관련주에 직접적인 모멘텀 제공
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 현대건설</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> DL이앤씨</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성물산</span>	</div>
+</article>
+<article class="news-card" data-sector="바이오" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 바이오</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#78</div>
+	</div>
+	<h2 class="card-title">모더나·MSD 암백신 3상 임상 성공 (흑색종 재발 42% 감소)</h2>
+	<ul class="summary-list">
+<li>암백신 효과 입증 최초의 3상 임상 결과 발표</li><li>흑색종 재발 위험을 42% 낮추는 유의미한 결과 도출</li><li>바이오 섹터 전반에 긍정적인 모멘텀 제공 및 혁신 치료제 기대감 상승</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 혁신적 암백신 임상 성공에 따른 바이오 섹터 전반의 투자 심리 개선 및 가치 재평가
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 모더나</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> MSD</span>	</div>
+</article>
+<article class="news-card" data-sector="보안/IT" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 보안/IT</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#79</div>
+	</div>
+	<h2 class="card-title">항공·물류 전산망 보안 취약점 노출 및 보안 솔루션 주목</h2>
+	<ul class="summary-list">
+<li>항공 및 물류 핵심 인프라에 대한 외부 시스템 보안 위협 발생</li><li>전 산업 분야의 보안 취약점 재점검 필요성 강력 시사</li><li>보안 솔루션 및 시스템 안정화 관련 기업들의 수혜 기대</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 국가 핵심 인프라 보안 위협에 따른 보안 솔루션 수요 급증 및 관련 기업의 모멘텀 확보
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 안랩</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> SK쉴더스</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로/정책" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로/정책</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#80</div>
+	</div>
+	<h2 class="card-title">저PBR 기업 구조적 개선 압박 및 밸류업 프로그램 가속</h2>
+	<ul class="summary-list">
+<li>저PBR 기업 대상 구조적 개선 압박 본격화</li><li>정부 밸류업 프로그램과 맞물려 저PBR 종목 관심 집중</li><li>기업의 구조적 개선 의지 및 실제 실적 변화 체크 중요</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 정부 정책과 연계된 저PBR 종목의 밸류에이션 재평가 및 주주 환원 정책 강화 기대
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 금융주</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 자동차</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 지주사</span>	</div>
+</article>
+<article class="news-card" data-sector="자동차/2차전지" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 자동차/2차전지</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#81</div>
+	</div>
+	<h2 class="card-title">국내 전기차 시장 내 중국산 비중 44% 및 공급망 영향력</h2>
+	<ul class="summary-list">
+<li>보조금 문턱에도 불구하고 3분기 전기차 판매량 중 중국산 비중 44% 기록</li><li>글로벌 공급망 내 중국산 제품의 강력한 영향력 확인</li><li>에너지 및 산업재 흐름의 구조적 변화와 경쟁 심화</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 중국산 전기차의 강력한 시장 침투로 인한 국내 제조사 및 배터리 업체의 점유율 위협
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 현대차</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 기아</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> LG에너지솔루션</span>	</div>
+</article>
+<article class="news-card" data-sector="가상자산/블록체인" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 가상자산/블록체인</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#82</div>
+	</div>
+	<h2 class="card-title">가상자산 과세 2030년까지 유예 검토 및 규제 불확실성 해소</h2>
+	<ul class="summary-list">
+<li>정부의 가상자산 과세 시점 2030년까지 연기 움직임 포착</li><li>규제 불확실성 해소에 따른 시장 심리 개선 기대</li><li>관련 섹터의 단기적 수급 변화 및 투자 심리 회복 가능성</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 과세 유예는 가상자산 시장의 심리적 저항선을 낮추고 투자 심리를 개선하는 강력한 모멘텀임.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 위메이드</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 카카오</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 네이버</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로/금융" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로/금융</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#83</div>
+	</div>
+	<h2 class="card-title">AI 투자 열풍에 따른 채권 시장 수급 부담 및 자금 경색 우려</h2>
+	<ul class="summary-list">
+<li>빅테크 회사채 폭증으로 인한 채권 시장 수급 부담 가중</li><li>AI 투자 확대가 유발하는 자금 경색(돈맥경화) 리스크 부각</li><li>국내 공사채 해외 발행 연기 등 유동성 흐름 변화</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> AI 열풍의 이면인 유동성 경색은 금리 변동성을 키우고 금융권의 자금 조달 비용을 상승시키는 리스크 요인임.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> KB금융</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 신한지주</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성증권</span>	</div>
+</article>
+<article class="news-card" data-sector="건설/부동산" data-importance="HIGH">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-high">HIGH</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 건설/부동산</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#84</div>
+	</div>
+	<h2 class="card-title">재건축 공사비 40% 급등에 따른 건설 원가 압박 및 수익성 악화</h2>
+	<ul class="summary-list">
+<li>재건축 공사비가 계약 시점 대비 40% 급등하며 건설 원가 압박 심화</li><li>공사비 쇼크로 인한 재건축 사업 진행 속도 및 수익성 변곡점 발생</li><li>건설사들의 영업이익률 저하 및 사업 지연 리스크 증대</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 공사비 급등은 건설사의 수익성 저하와 재건축 사업 지연을 초래하여 건설 섹터 전반에 강력한 비용 리스크로 작용함.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 현대건설</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> DL이앤씨</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성물산</span>	</div>
+</article>
+<article class="news-card" data-sector="AI, 반도체, 하드웨어" data-importance="NORMAL">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-normal">NORMAL</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> AI, 반도체, 하드웨어</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#85</div>
+	</div>
+	<h2 class="card-title">셀레스티카, AI 매매 청산세에 따른 주가 하락 및 실적 발표 주목</h2>
+	<ul class="summary-list">
+<li>AI 관련 매매 청산으로 인한 셀레스티카 주가 단기 하락세</li><li>현재 주가 움직임은 단기적 매매 청산 요인에 기인</li><li>향후 실적 발표가 주가 반전의 핵심 모멘텀으로 작용할 전망</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> AI 섹터 단기 과열에 따른 차익 실현 매물 출회 및 실적 기반의 펀더멘털 확인 필요
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 셀레스티카(CELA)</span>	</div>
+</article>
+<article class="news-card" data-sector="OTT, 콘텐츠, 미디어" data-importance="NORMAL">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-normal">NORMAL</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> OTT, 콘텐츠, 미디어</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#86</div>
+	</div>
+	<h2 class="card-title">티빙(TVING) 앱 설치 급증 및 스트리밍 시장 1위 탈환</h2>
+	<ul class="summary-list">
+<li>티빙 앱 설치 건수 34만 건에서 81만 건으로 급증하며 스트리밍 시장 1위 탈환</li><li>사용자들의 콘텐츠 소비 행태 변화 및 플랫폼 유입 증가세 가속화</li><li>콘텐츠 제작 및 유통 관련 기업들의 실적 개선 기대감 상승</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> OTT 시장 내 점유율 변화는 콘텐츠 제작 및 유통 기업의 수익성 개선과 직결되는 핵심 지표임.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> CJ ENM</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 스튜디오드래곤</span>	</div>
+</article>
+<article class="news-card" data-sector="유통, 소비재" data-importance="NORMAL">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-normal">NORMAL</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 유통, 소비재</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#87</div>
+	</div>
+	<h2 class="card-title">신세계그룹 &#039;쓱데이&#039; 대규모 할인 행사 및 18개 계열사 동참</h2>
+	<ul class="summary-list">
+<li>신세계그룹 18개 계열사 총출동 대규모 할인 행사 및 닌텐도 팝업 등 이벤트 진행</li><li>파격적 혜택을 통한 소비자 소비 심리 자극 및 유통 섹터 활력 제고</li><li>대규모 프로모션에 따른 단기 매출 증대 기대감 형성</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 대규모 프로모션을 통한 단기 매출 증대 및 유통 섹터 활력 제고가 기대됨.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 신세계</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 이마트</span>	</div>
+</article>
+<article class="news-card" data-sector="부동산/정책" data-importance="NORMAL">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-normal">NORMAL</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 부동산/정책</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#88</div>
+	</div>
+	<h2 class="card-title">종부세율 인상 논의 및 임대료 전가 가능성 제기</h2>
+	<ul class="summary-list">
+<li>주택 종합부동산세율 인상 시 임차인에게 세금 부담 전가 우려</li><li>임대료 상승 압력으로 인한 임대차 시장 비용 구조 변화 가능성</li><li>정부 세제 개편 방향에 따른 부동산 관련주 수급 동향 주시 필요</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 세제 정책 변화에 따른 임대 시장의 비용 구조 변화는 부동산 관련 기업들의 정책 민감도를 높이는 요소임.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 현대건설</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> DL이앤씨</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로/정책" data-importance="NORMAL">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-normal">NORMAL</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로/정책</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#89</div>
+	</div>
+	<h2 class="card-title">가업상속공제 한도 확대 논의 및 재정 건전성 이슈</h2>
+	<ul class="summary-list">
+<li>가업상속공제 한도 확대(600억→1000억) 논의 진행</li><li>출산지원금 재원 문제 등 재정 건전성과의 충돌 지적</li><li>세제 정책 방향성에 따른 산업별 수혜 및 리스크 분석 필요</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 가업상속세 완화는 대기업 승계 및 자산 유지에 긍정적이나, 재정 정책의 불확실성이 공존하는 상황임.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성전자</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> SK하이닉스</span>	</div>
+</article>
+<article class="news-card" data-sector="엔터테인먼트" data-importance="NORMAL">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-normal">NORMAL</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 엔터테인먼트</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#90</div>
+	</div>
+	<h2 class="card-title">K팝 주요 아티스트 신곡 공개 및 엔터테인먼트 모멘텀</h2>
+	<ul class="summary-list">
+<li>세븐틴, 아이브, 에이티즈 등 주요 아티스트 신곡 공개 예정</li><li>팬덤 기반 소비 활성화로 인한 엔터 섹터 긍정적 모멘텀</li><li>콘텐츠 제작 및 유통 기업들의 실적 기대감 증대</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 대형 아티스트의 신곡 활동은 단기적인 콘텐츠 소비 및 팬덤 기반 매출 증대에 기여하는 핵심 모멘텀임.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> HYBE</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> JYP Ent</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> SM Ent</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로/정책" data-importance="NORMAL">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-normal">NORMAL</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로/정책</span>
+			<span class="impact-badge impact-neutral">중립</span>
+		</div>
+		<div class="card-index">#91</div>
+	</div>
+	<h2 class="card-title">외국인 건보료 1조 원 흑자 및 한-중 상호주의 정책 논의 재점화</h2>
+	<ul class="summary-list">
+<li>외국인 건강보험료 사상 첫 1조 원 흑자 기록</li><li>중국의 건보 재정 적자 전환으로 인한 양국 간 재정 격차 발생</li><li>국제적 상호주의 논의 재점화에 따른 정책 변화 가능성</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 국가 간 재정 수급 불균형에 따른 정책 변화 가능성이 존재하나, 단기적 주가 영향력은 제한적임
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 관련 정책 수혜주</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로" data-importance="NORMAL">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-normal">NORMAL</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로</span>
+			<span class="impact-badge impact-neutral">중립</span>
+		</div>
+		<div class="card-index">#92</div>
+	</div>
+	<h2 class="card-title">트럼프 플로리다 사전투표 및 공화당 지지 의사 표명</h2>
+	<ul class="summary-list">
+<li>트럼프의 플로리다 중간선거 사전투표 진행 및 공화당 지지 의사 표명</li><li>미국 정치 상황 변화에 따른 정책 변동성 확대 가능성</li><li>정치적 이슈에 민감한 섹터들의 주가 흐름 변동성 주시 필요</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 미국 대선/중간선거 관련 정치적 동향은 정책 변화에 민감한 섹터에 변동성을 초래할 수 있는 매크로 변수임.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 미국 관련 ETF</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 정치 관련 테마주</span>	</div>
+</article>
+<article class="news-card" data-sector="매크로" data-importance="NORMAL">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-normal">NORMAL</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 매크로</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#93</div>
+	</div>
+	<h2 class="card-title">프랑스 대규모 반정부 시위 발생 및 유럽 투자 심리 위축 리스크</h2>
+	<ul class="summary-list">
+<li>프랑스 전역에서 41만 명 규모의 대규모 반정부 시위 발생</li><li>경찰 7만 명 투입에도 불구하고 파리 등 주요 지역 충돌 지속</li><li>유럽 전반의 투자 심리 불안정성 및 정치적 리스크 확대 가능성</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 사회적 불안정성으로 인한 유럽 시장 변동성 확대 및 정치적 리스크 부각
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 유럽 소비재 관련주</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> LVMH</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> L&#039;Oreal</span>	</div>
+</article>
+<article class="news-card" data-sector="유통, AI, 소비재" data-importance="NORMAL">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-normal">NORMAL</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 유통, AI, 소비재</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#94</div>
+	</div>
+	<h2 class="card-title">유통업계 연말 소비 시즌 대비 AI 기술 및 이색 상품 전략 가속화</h2>
+	<ul class="summary-list">
+<li>유통가 연말 소비 촉진을 위한 AI 기술 도입</li><li>맞춤형 경험 제공 및 이색 상품 구성 전략</li><li>소비재 및 플랫폼 기업의 실적 모멘텀</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 연말 소비 시즌과 AI 기술 결합으로 인한 유통 플랫폼 및 소비재 기업의 매출 증대 기대.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 쿠팡</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 네이버</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 이마트</span>	</div>
+</article>
+<article class="news-card" data-sector="보험, 소비재" data-importance="NORMAL">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-normal">NORMAL</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 보험, 소비재</span>
+			<span class="impact-badge impact-neutral">중립</span>
+		</div>
+		<div class="card-index">#95</div>
+	</div>
+	<h2 class="card-title">손해보험사 3분기 실적 방어 및 소비재 업종 실적 엇갈림</h2>
+	<ul class="summary-list">
+<li>손해보험사 투자손익 부진에도 불구하고 실적 방어 및 손해율 안정화</li><li>롯데칠성 음료 부진 속 주류 선방으로 인한 영업이익 감소</li><li>업종 내 개별 기업별 실적 모멘텀 차별화 뚜렷</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 보험업계의 리스크 관리 안정화 확인 및 소비재 업종 내 개별 기업의 부문별 성과에 따른 차별화된 대응 필요.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성화재</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> DB손해보험</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 롯데칠성</span>	</div>
+</article>
+<article class="news-card" data-sector="식품/건강기능식품" data-importance="NORMAL">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-normal">NORMAL</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 식품/건강기능식품</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#96</div>
+	</div>
+	<h2 class="card-title">&#039;일상 웰니스&#039; 트렌드 확산에 따른 보리 로스팅 등 대체 식품 수요 증가</h2>
+	<ul class="summary-list">
+<li>커피를 대체하는 보리 로스팅 제품 등 건강 지향적 소비 트렌드 확산</li><li>단순 음료 선호를 넘어선 &#039;일상 웰니스&#039; 키워드 중심의 식품 시장 변화</li><li>건강 기능성 소재 및 대체 식품 관련 기업의 실적 개선 모멘텀 확보</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 소비 트렌드 변화에 따른 식품 및 건강 기능성 소재 관련 기업의 신성장 동력 확보 및 실적 개선 가능성.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 대상</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> CJ제일제당</span>	</div>
+</article>
+<article class="news-card" data-sector="건설, 교통" data-importance="NORMAL">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-normal">NORMAL</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 건설, 교통</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#97</div>
+	</div>
+	<h2 class="card-title">서울 7개 자치구 경원선 지하화 공동 건의 및 인프라 개선 요구</h2>
+	<ul class="summary-list">
+<li>서울 7개 자치구 정부 대상 경원선 지하화 공동 건의안 제출</li><li>도시 교통 인프라 개선 및 미관 향상에 대한 지역 사회 요구 강화</li><li>대규모 도시 인프라 사업 추진 시 건설 및 교통 기업 수혜 가능성</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 대규모 도시 인프라 사업 추진 시 건설 및 교통 관련 기업들의 중장기적 모멘텀으로 작용
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 현대건설</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 대우건설</span>	</div>
+</article>
+<article class="news-card" data-sector="조선" data-importance="NORMAL">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-normal">NORMAL</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 조선</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#98</div>
+	</div>
+	<h2 class="card-title">대선조선 워크아웃 종결 및 조선업계 턴어라운드 신호</h2>
+	<ul class="summary-list">
+<li>수출입은행, 대선조선 워크아웃 종결로 재무 구조 개선 및 새출발 지원</li><li>조선업계의 주요 턴어라운드 신호로 해석되며 사업 재개 모멘텀 확보</li><li>재무 정상화에 따른 향후 실적 회복 여부가 업종 전반의 투자 포인트</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 개별 기업의 재무 정상화가 조선 섹터 전반의 업황 회복 기대감과 수주 모멘텀으로 확산 가능
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> HD현대중공업</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성중공업</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 한화오션</span>	</div>
+</article>
+<article class="news-card" data-sector="바이오, 헬스케어" data-importance="NORMAL">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-normal">NORMAL</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 바이오, 헬스케어</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#99</div>
+	</div>
+	<h2 class="card-title">헬스케어 섹터 M&amp;A 수요 증가 및 바이오 ETF 강세</h2>
+	<ul class="summary-list">
+<li>산업장비 및 헬스케어 분야 매물 출현으로 외식 프랜차이즈 등 M&amp;A 수요 주목</li><li>헬스온클라우드-분당서울대병원 국제 콘퍼런스 등 업계 활발한 움직임 포착</li><li>바이오·헬스케어 ETF 9% 수익률 기록하며 시장 내 선방세 지속</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> M&amp;A 활성화와 섹터 내 펀더멘털 강세가 지속적인 투자 매력도 및 자산 이동 모멘텀 제공
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성바이오로직스</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 셀트리온</span>	</div>
+</article>
+<article class="news-card" data-sector="건설/부동산" data-importance="NORMAL">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-normal">NORMAL</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 건설/부동산</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#100</div>
+	</div>
+	<h2 class="card-title">3기 신도시 교통망 구축 및 민간분양 속도전</h2>
+	<ul class="summary-list">
+<li>계양 지역 첫 민간분양 진행 및 부동산 시장 실질적 움직임</li><li>국토부 3기 신도시 교통망 구축 인허가 사업 확대</li><li>주택 공급 및 인프라 확충 모멘텀 강화</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 정부의 인프라 확충 정책과 민간 분양 가속화로 인한 건설 및 관련 자재 수혜 기대
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 현대건설</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> DL이앤씨</span>	</div>
+</article>
+<article class="news-card" data-sector="식품, 주주환원" data-importance="NORMAL">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-normal">NORMAL</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 식품, 주주환원</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#101</div>
+	</div>
+	<h2 class="card-title">오리온 실체스터 측의 배당 증액 요구 및 주주 환원 압박</h2>
+	<ul class="summary-list">
+<li>7% 주주 실체스터의 배당 증액 강력 요구 및 지지 철회 경고</li><li>주주 행동주의 부각에 따른 오리온의 주주 환원 정책 변화 가능성</li><li>기업 가치 제고를 위한 경영진의 대응이 주가 변동성 핵심</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 주주 행동주의에 따른 배당 정책 변화는 주가 및 기업 가치 재평가의 모멘텀이 됨
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 오리온</span>	</div>
+</article>
+<article class="news-card" data-sector="건설, 인프라" data-importance="NORMAL">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-normal">NORMAL</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 건설, 인프라</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#102</div>
+	</div>
+	<h2 class="card-title">국토부, 3기 신도시 도로사업 &#039;직접 인허가형&#039; 확대</h2>
+	<ul class="summary-list">
+<li>국토부의 3기 신도시 교통망 구축을 위한 직접 인허가 추진</li><li>도로사업 7곳 포함 직접 인허가로 사업 속도 가속화</li><li>인프라 및 건설 섹터에 대한 정책적 수혜 기대</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 정부의 직접 인허가 추진은 건설 및 인프라 관련 기업의 수주 및 사업 속도 가속화 기대
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 현대건설</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> DL이앤씨</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> GS건설</span>	</div>
+</article>
+<article class="news-card" data-sector="가전/렌탈" data-importance="NORMAL">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-normal">NORMAL</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 가전/렌탈</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#103</div>
+	</div>
+	<h2 class="card-title">코웨이 해외 매출 2조 원 목표 및 글로벌 확장 모멘텀</h2>
+	<ul class="summary-list">
+<li>코웨이 말레이시아 등 해외 시장 공략 가속화</li><li>해외 매출 2조 원 목표를 통한 글로벌 성장 동력 확보</li><li>경쟁사 쿠쿠 대비 뚜렷한 해외 확장성 및 실적 차별화</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 글로벌 확장성 및 실적 차별화는 개별 종목의 밸류에이션 재평가 및 자금 유입의 핵심 요소
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 코웨이</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 쿠쿠전자</span>	</div>
+</article>
+<article class="news-card" data-sector="AI, 금융보안" data-importance="NORMAL">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-normal">NORMAL</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> AI, 금융보안</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#104</div>
+	</div>
+	<h2 class="card-title">금융감독원, AI 기반 빅데이터 분석을 통한 불법사금융 추적 시스템 구축</h2>
+	<ul class="summary-list">
+<li>금융당국, AI 활용해 38만 건 데이터 분석 및 불법사금융 배후 추적</li><li>금융 시장 건전성 강화를 위한 강력한 감시망 구축</li><li>금융 보안 및 데이터 분석 기술 역량 중요성 증대</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 금융권의 AI 도입 가속화와 규제 기술(RegTech) 시장의 성장을 시사함.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성SDS</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> LG CNS</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 안랩</span>	</div>
+</article>
+<article class="news-card" data-sector="식품, 수출" data-importance="NORMAL">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-normal">NORMAL</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 식품, 수출</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#105</div>
+	</div>
+	<h2 class="card-title">K-푸드 &#039;햇반&#039; 미국 및 남미 시장 진출 확대</h2>
+	<ul class="summary-list">
+<li>한국의 대표 식품 &#039;햇반&#039;이 미국 시장에 성공적으로 안착</li><li>남미 지역의 45%를 타겟으로 한 공격적 글로벌 확장</li><li>K-푸드 확산세에 따른 관련 기업의 실적 개선 기대</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> K-푸드 글로벌 확산은 식품 섹터의 실적 개선 및 수출 모멘텀으로 작용함.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> CJ제일제당</span>	</div>
+</article>
+<article class="news-card" data-sector="IT, 매크로" data-importance="NORMAL">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-normal">NORMAL</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> IT, 매크로</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#106</div>
+	</div>
+	<h2 class="card-title">피터 틸, 애플을 &#039;순수한 가치주&#039;로 재평가</h2>
+	<ul class="summary-list">
+<li>피터 틸이 애플을 혁신보다는 잘 운영되는 가치주로 평가</li><li>안정적인 현금 흐름과 운영 능력에 주목하는 투자자 증가</li><li>애플의 가치주 관점 재평가 및 안정성 강조</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 글로벌 기술주에 대한 투자 심리가 성장성에서 안정적 가치로 이동하는 흐름을 시사함.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 애플</span>	</div>
+</article>
+<article class="news-card" data-sector="바이오/제약" data-importance="NORMAL">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-normal">NORMAL</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 바이오/제약</span>
+			<span class="impact-badge impact-bull">상승/수혜</span>
+		</div>
+		<div class="card-index">#107</div>
+	</div>
+	<h2 class="card-title">K-바이오 희귀질환 치료 후보물질 공급 및 기술력 확보</h2>
+	<ul class="summary-list">
+<li>희귀질환 치료 후보물질 공급을 통한 난치병 극복 영역 진입</li><li>국내 바이오 산업의 기술력 입증 및 파이프라인 가치 상승</li><li>희귀질환 치료제 시장 내 경쟁력 확보 및 투자 모멘텀 형성</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 희귀질환 치료제는 고부가가치 영역으로, 기술력 입증 시 관련 바이오 기업의 파이프라인 가치 및 시장 점유율 확대 기대.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 삼성바이오로직스</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 셀트리온</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> SK바이오팜</span>	</div>
+</article>
+<article class="news-card" data-sector="금융/부동산" data-importance="NORMAL">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-normal">NORMAL</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 금융/부동산</span>
+			<span class="impact-badge impact-neutral">중립</span>
+		</div>
+		<div class="card-index">#108</div>
+	</div>
+	<h2 class="card-title">주택담보대출 고정/변동금리 차이 축소(0.2%p)에 따른 시장 변화</h2>
+	<ul class="summary-list">
+<li>고정금리와 변동금리 차이가 0.2%p로 축소되며 차주 선택 셈법 복잡화</li><li>금리 유형보다 기타 변수가 대출 결정에 미치는 영향력 증대</li><li>주택 시장의 금리 민감도 변화 및 금융권 대출 포트폴리오 변화 주시 필요</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 금리 차이 축소는 대출 수요의 변화를 야기하며, 금융권의 대출 포트폴리오 전략 및 부동산 시장 거래량에 영향을 미침.
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> KB금융</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 신한지주</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 하나금융지주</span>	</div>
+</article>
+<article class="news-card" data-sector="보안, 유통" data-importance="NORMAL">
+	<div class="card-meta-row">
+		<div class="badge-cluster">
+			<span class="importance-badge badge-normal">NORMAL</span>
+			<span class="sector-badge"><i class="fa-solid fa-layer-group"></i> 보안, 유통</span>
+			<span class="impact-badge impact-bear">하락/리스크</span>
+		</div>
+		<div class="card-index">#109</div>
+	</div>
+	<h2 class="card-title">롯데 계열사 기프티엘 해킹으로 인한 개인정보 유출 사고 발생</h2>
+	<ul class="summary-list">
+<li>롯데 계열사 기프티엘 해킹으로 고객 성명, 계좌번호 등 유출</li><li>기업 신뢰도 타격 및 보안 시스템 취약점 노출로 인한 리스크 부각</li><li>향후 보안 강화 노력 및 리스크 관리 역량이 주가 변수로 작용</li>	</ul>
+	<div class="reason-box">
+		<span class="reason-label"><i class="fa-solid fa-chart-line"></i> 파급 분석:</span> 개인정보 유출 사고에 따른 기업 이미지 실추 및 보안 관련 리스크 관리 중요성 증대
+	</div>
+	<div class="stocks-cluster">
+<span class="stock-tag"><i class="fa-solid fa-tag"></i> 롯데쇼핑</span><span class="stock-tag"><i class="fa-solid fa-tag"></i> 안랩</span>	</div>
+</article>
+		</main>
+	</div>
+	<script>
+		(function () {
+			var searchInput = document.getElementById("news-search");
+			var tabsContainer = document.getElementById("sector-filter-tabs");
+			var cardsGrid = document.getElementById("news-card-grid");
+			var cards = cardsGrid.getElementsByClassName("news-card");
+			var currentSector = "ALL";
+
+			function applyFilter() {
+				var query = (searchInput.value || "").trim().toLowerCase();
+				for (var i = 0; i < cards.length; i++) {
+					var card = cards[i];
+					var sec = card.getAttribute("data-sector") || "";
+					var text = card.innerText.toLowerCase();
+					var secMatch = (currentSector === "ALL" || sec === currentSector);
+					var queryMatch = (!query || text.indexOf(query) !== -1);
+					card.style.display = (secMatch && queryMatch) ? "flex" : "none";
+				}
+			}
+
+			searchInput.addEventListener("input", applyFilter);
+			tabsContainer.addEventListener("click", function (e) {
+				var target = e.target.closest(".filter-tab-btn");
+				if (!target) return;
+				var btns = tabsContainer.getElementsByClassName("filter-tab-btn");
+				for (var b = 0; b < btns.length; b++) btns[b].classList.remove("active");
+				target.classList.add("active");
+				currentSector = target.getAttribute("data-sector");
+				applyFilter();
+			});
+		})();
+	</script>
+</body>
+</html>
