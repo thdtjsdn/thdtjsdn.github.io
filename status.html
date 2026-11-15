@@ -1,0 +1,102 @@
+<!doctype html><html lang=ko><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Enterprise Repository Intelligence Report</title><meta name=description content="thdtjsdn의 GitHub 레파지토리 실시간 시스템 분석 및 인텔리전스 리포트입니다. 디스크 사용량, 언어 구성, 보안 설정을 시각화합니다."><meta name=keywords content="GitHub, Repository, Analytics, thdtjsdn, Software Development, System Report"><meta name=author content=thdtjsdn><link rel=canonical href=https://thdtjsdn.github.io/status.html><meta property=og:type content=website><meta property=og:title content="Enterprise Repository Intelligence Report"><meta property=og:description content="GitHub API를 활용한 실시간 레파지토리 정밀 진단 대시보드"><meta property=og:url content=https://thdtjsdn.github.io/status.html><meta property=og:site_name content="GitHub Intelligence Monitor"><meta name=robots content="index, follow"><meta name=ai-content-type content=software-analysis-dashboard><meta name=revisit-after content="1 days"><script type=application/ld+json>{
+	"@context": "https://schema.org",
+	"@type": "WebApplication",
+	"name": "GitHub Repository Intelligence Report",
+	"description": "Real-time dashboard for analyzing GitHub repository metrics, features, and security flags.",
+	"url": "https://thdtjsdn.github.io/status.html",
+	"applicationCategory": "DeveloperTool",
+	"operatingSystem": "Web Browser",
+	"author": {
+	"@type": "Person",
+	"name": "thdtjsdn"
+	},
+	"keywords": "GitHub API, Repository Monitor, Software Engineering Metrics"
+	}</script><link rel=stylesheet href=https://thdtjsdn.com:49311/js-api/TAPI.css><script src=https://thdtjsdn.com:49311/js-api/TAPI.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3PY66LTJF"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-Q3PY66LTJF")</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin=anonymous></script><style>:root{--bg:#050505;--surface:#0d0d0d;--border:#222;--hl-gold:#d4af37;--hl-blue:#0070f3;--hl-green:#00ff88;--hl-red:#ff4444;--text-main:#efefef;--text-dim:#777;--font-mono:'JetBrains Mono','Fira Code','Courier New',monospace}body.light-mode{--bg:#f5f5f7;--surface:#ffffff;--border:#d2d2d7;--hl-gold:#b08d1a;--hl-blue:#0071e3;--hl-green:#1d9d5c;--hl-red:#d70015;--text-main:#1d1d1f;--text-dim:#6e6e73}body{background-color:var(--bg);color:var(--text-main);font-family:var(--font-mono);margin:0;padding:20px;font-size:12px;line-height:1.4;transition:background-color .3s,color .3s;overflow-y:auto}.container{max-width:1200px;margin:0 auto;border:1px solid var(--border);padding:30px;background:var(--surface);box-shadow:0 10px 40px rgba(0,0,0,.3)}header{display:flex;justify-content:space-between;border-bottom:2px solid var(--hl-gold);padding-bottom:15px;margin-bottom:25px}.theme-toggle{cursor:pointer;border:1px solid var(--hl-gold);background:0 0;color:var(--hl-gold);padding:4px 12px;font-family:var(--font-mono);font-size:10px;font-weight:700;transition:.2s}.theme-toggle:hover{background:var(--hl-gold);color:var(--bg)}.metrics-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px;margin-bottom:25px}.card{background:var(--surface);border:1px solid var(--border);padding:15px;position:relative}.card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--hl-blue)}.card.gold::before{background:var(--hl-gold)}.card.green::before{background:var(--hl-green)}.card-label{font-size:10px;color:var(--text-dim);text-transform:uppercase;margin-bottom:4px}.card-value{font-size:1.2rem;font-weight:700;letter-spacing:-.5px}.section{margin-bottom:25px}.section-header{font-size:11px;color:var(--hl-gold);background:rgba(212,175,55,.05);padding:5px 10px;border-left:3px solid var(--hl-gold);margin-bottom:10px;font-weight:700}.data-table{width:100%;border-collapse:collapse}.data-table tr{border-bottom:1px solid var(--border)}.data-table tr:last-child{border-bottom:none}.data-table td{padding:10px;vertical-align:top}.key{color:var(--text-dim);width:200px;font-weight:500}.val{color:var(--text-main);word-break:break-all}.link{color:var(--hl-blue);text-decoration:none}.link:hover{text-decoration:underline}.status-true{color:var(--hl-green);font-weight:700}.status-false{color:var(--hl-red)}.tag{background:var(--border);padding:2px 6px;border-radius:3px;font-size:10px;margin-right:5px}@media (max-width:768px){.metrics-grid{grid-template-columns:1fr 1fr}.key{width:120px}}</style></head><body><div class=container><div style=display:flex;justify-content:flex-end;margin-bottom:10px><button class=theme-toggle id=themeBtn>THEME: DARK</button></div><div id=report-content><div style=text-align:center;padding:100px;color:var(--hl-gold)>ACCESSING REPOSITORY DATA...</div></div></div><script>const API_URL="https://api.github.com/repos/thdtjsdn/thdtjsdn.github.io",body=document.body,themeBtn=document.getElementById("themeBtn"),savedTheme=localStorage.getItem("repo_report_theme")||"dark";async function loadData(){try{var t=await(await fetch(API_URL)).json(),s=t.size,a=(s/1024).toFixed(2),d=(s/1048576).toFixed(3),e=1e6<s?d+" GB":a+" MB";document.getElementById("report-content").innerHTML=`
+				<header>
+					<div>
+						<div style="color:var(--text-dim); font-size:9px;">REPOSITORY_ID: ${t.id} // NODE: ${t.node_id}</div>
+						<h1 style="margin:5px 0; color:var(--hl-gold);">${t.name.toUpperCase()}</h1>
+						<div style="color:var(--text-dim);">${t.full_name}</div>
+					</div>
+					<div style="text-align:right">
+						<div style="color:var(--text-dim); font-size:9px;">LATEST_SIGNAL_DETECTED</div>
+						<div style="font-weight:bold; font-size:1.1rem; color:var(--hl-green);">${new Date(t.pushed_at).toLocaleString()}</div>
+					</div>
+				</header>
+
+				<div class="metrics-grid">
+					<div class="card gold"><div class="card-label">DISK_USAGE</div><div class="card-value">${e}</div></div>
+					<div class="card"><div class="card-label">MAIN_LANGUAGE</div><div class="card-value">${t.language||"DATA"}</div></div>
+					<div class="card green"><div class="card-label">NETWORK_FORKS</div><div class="card-value">${t.forks_count}</div></div>
+					<div class="card"><div class="card-label">WATCHERS</div><div class="card-value">${t.watchers_count}</div></div>
+					<div class="card"><div class="card-label">OPEN_ISSUES</div><div class="card-value">${t.open_issues_count}</div></div>
+				</div>
+
+				<div class="section">
+					<div class="section-header">1. SYSTEM IDENTITY & TIMELINE</div>
+					<table class="data-table">
+						<tr><td class="key">Owner</td><td class="val">${t.owner.login} (Type: ${t.owner.type})</td></tr>
+						<tr><td class="key">Visibility</td><td class="val"><span class="tag">${t.visibility.toUpperCase()}</span></td></tr>
+						<tr><td class="key">Default Branch</td><td class="val">${t.default_branch}</td></tr>
+						<tr><td class="key">Created Date</td><td class="val">${t.created_at}</td></tr>
+						<tr><td class="key">Last Sync (Updated)</td><td class="val">${t.updated_at}</td></tr>
+						<tr><td class="key">License</td><td class="val">${t.license?t.license.name:"NO_ASSERTION"}</td></tr>
+					</table>
+				</div>
+
+				<div class="section">
+					<div class="section-header">2. FEATURE FLAGS & PERMISSIONS</div>
+					<table class="data-table">
+						<tr>
+							<td class="key">GitHub Pages</td><td class="val status-${t.has_pages}">${t.has_pages}</td>
+							<td class="key">Has Issues</td><td class="val status-${t.has_issues}">${t.has_issues}</td>
+						</tr>
+						<tr>
+							<td class="key">Has Projects</td><td class="val status-${t.has_projects}">${t.has_projects}</td>
+							<td class="key">Has Wiki</td><td class="val status-${t.has_wiki}">${t.has_wiki}</td>
+						</tr>
+						<tr>
+							<td class="key">Has Downloads</td><td class="val status-${t.has_downloads}">${t.has_downloads}</td>
+							<td class="key">Is Archived</td><td class="val status-${t.archived}">${t.archived}</td>
+						</tr>
+						<tr>
+							<td class="key">Allow Forking</td><td class="val status-${t.allow_forking}">${t.allow_forking}</td>
+							<td class="key">Is Template</td><td class="val status-${t.is_template}">${t.is_template}</td>
+						</tr>
+						<tr>
+							<td class="key">Commit Sign-off</td><td class="val status-${t.web_commit_signoff_required}">${t.web_commit_signoff_required}</td>
+							<td class="key">Discussions</td><td class="val status-${t.has_discussions}">${t.has_discussions}</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="section">
+					<div class="section-header">3. NETWORK & ENDPOINT MAPPING</div>
+					<table class="data-table">
+						<tr><td class="key">Web URL</td><td class="val"><a href="${t.html_url}" target="_blank" class="link">${t.html_url}</a></td></tr>
+						<tr><td class="key">API Root</td><td class="val"><a href="${t.url}" target="_blank" class="link">${t.url}</a></td></tr>
+						<tr><td class="key">Clone (HTTPS)</td><td class="val">${t.clone_url}</td></tr>
+						<tr><td class="key">Clone (SSH)</td><td class="val">${t.ssh_url}</td></tr>
+						<tr><td class="key">Git URL</td><td class="val">${t.git_url}</td></tr>
+						<tr><td class="key">SVN URL</td><td class="val">${t.svn_url}</td></tr>
+					</table>
+				</div>
+
+				<div class="section">
+					<div class="section-header">4. SUB-RESOURCE URI LIST</div>
+					<div style="font-size:10px; color:var(--text-dim); display:grid; grid-template-columns: 1fr 1fr; gap:5px;">
+						<div>COMMITS: ${t.commits_url}</div>
+						<div>RELEASES: ${t.releases_url}</div>
+						<div>TAGS: ${t.tags_url}</div>
+						<div>LANGUAGES: ${t.languages_url}</div>
+						<div>DEPLOYMENTS: ${t.deployments_url}</div>
+						<div>CONTRIBUTORS: ${t.contributors_url}</div>
+						<div>STRICTURES: ${t.contents_url}</div>
+						<div>ARCHIVE: ${t.archive_url}</div>
+					</div>
+				</div>
+
+				<footer style="margin-top:50px; text-align:center; color:var(--text-dim); font-size:9px; border-top:1px solid var(--border); padding-top:20px;">
+					REPORT END // SYSTEM: GEMINI_INTELLIGENCE // AUTH: ${t.owner.login}
+				</footer>
+			`}catch(t){document.getElementById("report-content").innerHTML=`<div style="color:var(--hl-red)">DATA_ACCESS_DENIED: ${t.message}</div>`}}"light"===savedTheme&&(body.classList.add("light-mode"),themeBtn.innerText="THEME: LIGHT"),themeBtn.addEventListener("click",()=>{var t=body.classList.toggle("light-mode");themeBtn.innerText=t?"THEME: LIGHT":"THEME: DARK",localStorage.setItem("repo_report_theme",t?"light":"dark")}),loadData()</script></body></html>

@@ -1,0 +1,91 @@
+# SPECIFICATION: leverage_50k_guide.html
+
+## 1. DOM TREE HIERARCHY & LAYOUT STRUCTURE
+
+```text
+html[lang="ko"]
+├── head
+│   ├── meta[charset="UTF-8"], meta[viewport]
+│   ├── link (Pretendard Font CDN)
+│   ├── link (Font Awesome 6.5.1 CDN)
+│   └── style (Black Base Dark Theme / Red & White High-Contrast / Mobile Card Responsive CSS)
+└── body
+	├── div.app-container
+	│   ├── header.hero-header                                  [ROW 1: 상단 요약 & 1티어 $50,000 계산기]
+	│   │   ├── div.hero-badge-row
+	│   │   ├── h1.hero-title > span#heroNotionalText.point-red
+	│   │   ├── p.hero-desc
+	│   │   ├── div.calc-panel                                  [주문 규모 실시간 계산기 ($5K~$50K)]
+	│   │   │   ├── div.calc-left
+	│   │   │   │   ├── input#notionalInput.calc-input
+	│   │   │   │   └── div#presetBtnGroup.preset-group (.preset-btn[data-notional])
+	│   │   │   └── div.calc-right
+	│   │   │       └── button#feeToggleBtn.toggle-btn
+	│   │   └── div#summaryGrid.summary-grid                    [100x · 75x · 50x · 25x · 20x · 10x 요약 카드]
+	│   │
+	│   ├── nav.sticky-controls                                 [ROW 2: 모바일/PC 스티키 필터 바]
+	│   │   ├── div.search-row
+	│   │   │   ├── div.search-box > input#searchInput + button#clearSearchBtn
+	│   │   │   └── button#toggleAllSectionsBtn (#toggleAllIcon, #toggleAllText)
+	│   │   ├── div#categoryFilterRow.chip-wrap-row             [전체 및 1~11번 섹션 독립 필터 버튼]
+	│   │   └── div#leverageFilterRow.chip-scroll-row           [전체 배율 및 100x~10x 배율 필터 + #resultCounter]
+	│   │
+	│   ├── main#sectionsContainer                              [ROW 3: 11개 섹션(218종목) 통합 테이블/모바일 카드 뷰]
+	│   │   ├── section#sec-1.category-section                  [1. 원자재 · 에너지 · 외환 선물 (9종)]
+	│   │   ├── section#sec-2.category-section                  [2. 미국 빅테크 · AI · 반도체 · 광통신 주식 (35종)]
+	│   │   ├── section#sec-3.category-section                  [3. 클라우드 · 엔터프라이즈 SW · 사이버보안 · 서버 하드웨어 (35종)]
+	│   │   ├── section#sec-4.category-section                  [4. 크립토 · 채굴 · 핀테크 · 금융 관련주 (19종)]
+	│   │   ├── section#sec-5.category-section                  [5. 전력 · 원전 · 우주항공 · 양자 · 희토류 · 전통 우량주 (47종)]
+	│   │   ├── section#sec-6.category-section                  [6. 미국 상장 ETF (38종)]
+	│   │   ├── section#sec-7.category-section                  [7. 미국 비상장 유니콘 Pre-IPO 선물 (6종)]
+	│   │   ├── section#sec-8.category-section                  [8. 🇰🇷 한국 증시 종목 (8종)]
+	│   │   ├── section#sec-9.category-section                  [9. 🇨🇳 중국 증시 · 빅테크 · AI 유니콘 종목 (14종)]
+	│   │   ├── section#sec-10.category-section                 [10. 🇯🇵 일본 증시 종목 (1종)]
+	│   │   └── section#sec-11.category-section                 [11. 🇭🇰 홍콩 증시 상장 종목 · 레버리지 ETF (6종)]
+	│   │
+	│   └── div#emptyState.empty-state > button#resetFiltersBtn [ROW 4: 검색 결과 없음 안내]
+	│
+	├── div#copyToast.copy-toast > span#copyToastText           [OVERLAY: 클립보드 복사 토스트]
+	└── button#scrollTopBtn.scroll-top-btn                      [OVERLAY: 상단 이동 플로팅 버튼]
+```
+
+---
+
+## 2. DOM ID & SELECTOR ROLE MAPPING
+
+| 셀렉터 (ID / Class) | 역할 설명 |
+| :--- | :--- |
+| `#heroNotionalText` | 상단 메인 타이틀 내 현재 주문 규모 표시 (`5만 불($50,000)` 등) |
+| `#notionalInput` | 주문 금액(USDT) 직접 입력 필드 (기본 `50000`, 최대 1티어 한도 기준) |
+| `#presetBtnGroup` | `$5,000` / `$10,000` / `$25,000` / `$50,000 (1티어 최대)` 원터치 프리셋 버튼 그룹 |
+| `#feeToggleBtn` | 본문 표 내 시장가 수수료(`0.05%`) 합산 금액 전환 토글 버튼 |
+| `#summaryGrid` | 실제 존재하는 6개 레버리지 배율(`100x`, `75x`, `50x`, `25x`, `20x`, `10x`) 요약 및 필터 카드 그리드 |
+| `#searchInput` | 심볼, 기업명, 티커, 국가, 섹터 키워드 실시간 통합 검색창 |
+| `#categoryFilterRow` | `전체` 및 `1~7번 미국/글로벌` + `8. 한국` + `9. 중국` + `10. 일본` + `11. 홍콩` 독립 섹션 필터 칩 |
+| `#leverageFilterRow` | `전체 배율` 및 `100x`~`10x` 배율 필터 칩 바 + `#resultCounter` |
+| `#sectionsContainer` | 1~11번 전 섹션 단일 규격 테이블(PC) 및 반응형 카드(모바일) 렌더링 컨테이너 |
+| `.sym-chip[data-copy-symbol]` | 클릭/터치 시 심볼 텍스트를 클립보드에 복사하는 버튼 |
+| `#copyToast` | 심볼 복사 완료 안내 자기 소멸형(`setTimeout`) 토스트 |
+
+---
+
+## 3. EMBEDDED VANILLA JS NAMESPACE & PIPELINE ARCHITECTURE
+
+```text
+[DOMContentLoaded] ──> App.start()
+	├── UIElements.init()                 : 주요 DOM 참조 단일 초기화
+	├── ViewRenderer.renderSummaryCards() : 주문 규모 기준 100x~10x 6개 배율 요약 카드 렌더링
+	├── ViewRenderer.renderSectionsOnce() : 1~11번 전 섹션(218종목) 단일 규격 테이블 DOM 생성
+	├── ViewRenderer.updateMarginCells()  : 종목별 순수 증거금 및 수수료 포함 USDT 수치 갱신
+	├── ViewRenderer.applyFilters()       : 검색어 / 국가·섹션 / 배율 복합 필터링 및 카운트 갱신
+	└── EventController.bindAll()         : 모든 UI 이벤트 addEventListener 위임 바인딩
+```
+
+### Namespace Signatures
+* **`CONFIG`**: `DEFAULT_NOTIONAL`, `TAKER_FEE_RATE`, `TOAST_DURATION_MS`, `SUMMARY_TIERS`, `SECTIONS`
+* **`STATE`**: `notional`, `includeFeeInTable`, `searchQuery`, `selectedCategory`, `selectedLeverage`, `allCollapsed`, `toastTimerId`
+* **`UIElements`**: `init()`
+* **`Util`**: `formatUsdt(val)`, `formatNotionalHeadline(notional)`, `formatColMarginTitle(notional, includeFee)`, `calcMargin(notional, lev, includeFee)`, `getLevBadgeClass(lev)`, `escapeHtml(str)`, `copyToClipboard(text)`, `fallbackCopy(text)`
+* **`ViewRenderer`**: `renderSummaryCards()`, `renderSectionsOnce()`, `updateMarginCells()`, `applyFilters()`, `syncFilterChipStates()`, `syncPresetButtons()`, `showToast(symbolText)`
+* **`EventController`**: `bindAll()`
+* **`App`**: `start()`
